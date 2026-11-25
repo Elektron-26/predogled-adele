@@ -20,7 +20,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:clip}
 body{margin:0;background:var(--noc);color:var(--slon);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:200;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+body::after{content:none;position:fixed;inset:0;pointer-events:none;z-index:200;opacity:0;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 img{display:block;max-width:100%}
 a{color:inherit}
 p{margin:0}
@@ -28,7 +28,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:300;margin:0;line-height:.95;lette
 em{font-style:italic}
 .w{max-width:1360px;margin:0 auto;padding:0 clamp(22px,4.5vw,64px)}
 .nad{font-size:11px;font-weight:400;letter-spacing:.34em;text-transform:uppercase;color:var(--sampanjec)}
-.nad::before{content:"";display:inline-block;width:34px;height:1px;background:currentColor;vertical-align:middle;margin-right:14px}
+
 .svetla{background:var(--slon);color:var(--noc);color-scheme:light}
 .svetla .nad{color:var(--bron)}
 .povezava{display:inline-flex;align-items:center;gap:16px;font-size:11.5px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;padding:6px 0;position:relative}
@@ -61,16 +61,16 @@ header.on{top:0;background:rgba(21,17,14,.84);backdrop-filter:blur(16px) saturat
 
 .uvod{position:relative;min-height:100svh;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);overflow:hidden}
 .uvod-t{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:170px clamp(22px,4.5vw,64px) 100px max(clamp(22px,4.5vw,64px),calc((100vw - 1360px)/2 + 64px))}
-.uvod h1{font-size:clamp(64px,8.8vw,150px);margin:34px 0 36px}
+.uvod h1{font-size:clamp(58px,7.6vw,128px);margin:34px 0 36px}
 .uvod h1 .vr{display:block;overflow:hidden;padding-bottom:.06em}
 .uvod h1 .vr>span{display:block}
-.uvod h1 em{color:var(--sampanjec)}
+
 .uvod .opis{max-width:38ch;color:var(--siva-t);font-size:17px;margin-bottom:48px}
 .akcije{display:flex;flex-wrap:wrap;align-items:center;gap:22px 36px}
 .uvod-f{position:relative;margin:0}
 .uvod-f .glavna{position:absolute;inset:0;overflow:hidden}
 .uvod-f .glavna img{width:100%;height:115%;object-fit:cover;object-position:center 40%}
-.uvod-f .glavna::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--noc) 0%,rgba(21,17,14,0) 22%),linear-gradient(0deg,rgba(21,17,14,.55),rgba(21,17,14,0) 30%)}
+.uvod-f .glavna::after{content:none;position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--noc) 0%,rgba(21,17,14,0) 22%),linear-gradient(0deg,rgba(21,17,14,.55),rgba(21,17,14,0) 30%)}
 .uvod-f .mala{position:absolute;left:-9%;bottom:12%;width:clamp(150px,15vw,240px);aspect-ratio:3/4;overflow:hidden;z-index:3;outline:1px solid rgba(205,166,124,.5);outline-offset:10px}
 .uvod-f .mala img{width:100%;height:100%;object-fit:cover}
 .uvod-f figcaption{position:absolute;right:clamp(22px,4.5vw,64px);bottom:40px;z-index:3;font-family:var(--serif);font-style:italic;font-size:18px;color:var(--slon)}
@@ -83,17 +83,13 @@ header.on{top:0;background:rgba(21,17,14,.84);backdrop-filter:blur(16px) saturat
 .izjava{padding:clamp(120px,15vw,230px) 0}
 .izjava .w{display:grid;grid-template-columns:2fr 10fr;gap:40px}
 .izjava p{font-family:var(--serif);font-weight:300;font-size:clamp(34px,4.4vw,70px);line-height:1.14;letter-spacing:-.015em}
-.izjava p em{color:var(--bron)}
-.izjava .mini{display:inline-block;width:1.6em;height:1em;vertical-align:-.1em;margin:0 .14em;overflow:hidden;border-radius:999px}
-.izjava .mini img{width:100%;height:100%;object-fit:cover}
-.izjava .beseda{opacity:.14;transition:opacity .4s}
-.izjava .beseda.on{opacity:1}
+
 @media(max-width:900px){.izjava .w{grid-template-columns:1fr}}
 
 .kolekciji{padding:clamp(110px,13vw,190px) 0}
 .kol-glava{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:clamp(50px,6vw,80px)}
 .kol-glava h2{font-size:clamp(56px,7vw,120px);margin-top:26px}
-.kol-glava h2 em{color:var(--sampanjec)}
+
 .kol-glava p{max-width:40ch;color:var(--siva-t)}
 .panela{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,1.6vw,24px)}
 .panel{position:relative;display:block;height:min(88svh,860px);overflow:hidden;text-decoration:none;color:var(--slon);background:var(--noc2)}
@@ -121,7 +117,7 @@ header.on{top:0;background:rgba(21,17,14,.84);backdrop-filter:blur(16px) saturat
 .pr-ovoj{height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding-top:70px}
 .pr-glava{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:clamp(26px,4vh,46px)}
 .pr-glava h2{font-size:clamp(52px,6vw,100px);margin-top:22px}
-.pr-glava h2 em{color:var(--bron)}
+
 .pr-glava p{max-width:36ch;color:var(--siva-s);font-size:15px}
 .pr-trak{display:flex;gap:clamp(18px,2vw,30px);padding:0 clamp(22px,4.5vw,64px);width:max-content}
 .kos{width:clamp(260px,26vw,400px);flex:none}
@@ -138,10 +134,10 @@ header.on{top:0;background:rgba(21,17,14,.84);backdrop-filter:blur(16px) saturat
 @media(max-width:900px){.pr-ovoj{height:auto;padding:110px 0}.pr-glava{flex-direction:column;align-items:start}.pr-trak{width:auto;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:20px}.kos{width:78vw;scroll-snap-align:start}.kos .okvir{height:auto;aspect-ratio:4/5}.kos.konec{width:70vw}.pr-napredek{display:none}}
 
 .meri{background:var(--glina);padding:clamp(110px,13vw,190px) 0;position:relative;overflow:hidden}
-.meri::before{content:"";position:absolute;right:-20vw;top:-30vw;width:70vw;height:70vw;border-radius:50%;background:radial-gradient(circle,rgba(205,166,124,.18),rgba(205,166,124,0) 65%)}
+.meri::before{content:none;position:absolute;right:-20vw;top:-30vw;width:70vw;height:70vw;border-radius:50%;background:radial-gradient(circle,rgba(205,166,124,.18),rgba(205,166,124,0) 65%)}
 .meri-g{position:relative;display:grid;grid-template-columns:5fr 6fr;gap:clamp(40px,7vw,120px);align-items:start}
 .meri h2{font-size:clamp(54px,6.4vw,108px);margin:26px 0 34px}
-.meri h2 em{color:var(--sampanjec)}
+
 .meri .citat{font-family:var(--serif);font-style:italic;font-size:clamp(25px,2.3vw,32px);line-height:1.35;color:#F1E2D2;padding-left:26px;border-left:1px solid var(--sampanjec);margin-bottom:30px}
 .meri .uvodnik{color:#D8C0AE;max-width:42ch}
 .meri-f{position:relative;margin-top:60px;padding-bottom:18%}
@@ -179,7 +175,7 @@ header.on{top:0;background:rgba(21,17,14,.84);backdrop-filter:blur(16px) saturat
 .material{padding:clamp(110px,13vw,190px) 0}
 .mat-g{display:grid;grid-template-columns:6fr 5fr;gap:clamp(40px,7vw,120px);align-items:center}
 .material h2{font-size:clamp(60px,7.4vw,124px);margin:26px 0 30px}
-.material h2 em{color:var(--bron)}
+
 .material .uvodnik{color:var(--siva-s);max-width:44ch;font-size:17px}
 .material dl{margin:50px 0 0}
 .material dl div{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--crta-s)}
@@ -192,7 +188,7 @@ header.on{top:0;background:rgba(21,17,14,.84);backdrop-filter:blur(16px) saturat
 .galerija{padding:clamp(110px,13vw,190px) 0}
 .gal-glava{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:30px;margin-bottom:60px}
 .gal-glava h2{font-size:clamp(56px,6.6vw,110px);margin-top:24px}
-.gal-glava h2 em{color:var(--sampanjec)}
+
 .mreza{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(90px,9vw,140px);gap:clamp(12px,1.4vw,20px)}
 .mreza figure{margin:0;overflow:hidden;position:relative;background:var(--noc2)}
 .mreza img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--expo)}
@@ -207,7 +203,7 @@ header.on{top:0;background:rgba(21,17,14,.84);backdrop-filter:blur(16px) saturat
 .konec::after{content:"";position:absolute;inset:0;background:rgba(15,12,10,.62)}
 .konec .t{position:relative;z-index:2;padding:0 22px}
 .konec h2{font-size:clamp(58px,7.4vw,128px);margin:26px auto 30px;max-width:13ch}
-.konec h2 em{color:var(--sampanjec)}
+
 .konec p{max-width:44ch;margin:0 auto 46px;color:#D9CCBC}
 .konec .akcije{justify-content:center}
 
@@ -239,7 +235,7 @@ footer{background:#0C0A08;color:#9C8E7F;padding:90px 0 120px;font-size:14px}
 .lb .x{top:16px;right:16px}.lb .l{left:10px;top:50%;transform:translateY(-50%)}.lb .d{right:10px;top:50%;transform:translateY(-50%)}
 @media(max-width:600px){.lb .l,.lb .d{top:auto;bottom:58px;transform:none}.lb img{max-height:70vh}}
 [data-pov]{cursor:zoom-in}
-@media(hover:hover){[data-pov]{cursor:none}}
+
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -257,40 +253,35 @@ footer{background:#0C0A08;color:#9C8E7F;padding:90px 0 120px;font-size:14px}
 
 <section class="uvod">
   <div class="uvod-t">
-    <div class="nad an-up">Ročno ulito v Mariboru</div>
-    <h1><span class="vr"><span>Kosi, ki</span></span><span class="vr"><span><em>umirijo</em></span></span><span class="vr"><span>prostor.</span></span></h1>
-    <p class="opis an-up">Pladnji, posodice, lončki in vaze iz jesmonita. Vsakega ulijemo ročno, posebej zate, v odtenkih, ki jih izbereš sam.</p>
-    <div class="akcije an-up"><a class="gumb" href="#po-meri"><span>Sestavi svoj set</span></a><a class="povezava" href="#kolekciji">Kolekciji <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></a></div>
+    <div class="nad an-up">Studio Adéle · Maribor</div>
+    <h1><span class="vr"><span>Ročno uliti</span></span><span class="vr"><span>kosi iz</span></span><span class="vr"><span>jesmonita</span></span></h1>
+    <p class="opis an-up">Pladnji, posodice, lončki, vaze in dozirniki. Izdelamo jih v Mariboru, v barvi, ki jo izbereš ti.</p>
+    <div class="akcije an-up"><a class="gumb" href="#po-meri"><span>Sestavi svoj set</span></a><a class="povezava" href="#kolekciji">Poglej kolekciji <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></a></div>
   </div>
   <figure class="uvod-f">
     <div class="glavna" data-pov><img class="par" src="img/skrinjica.jpg" alt="Posodica s kupolo na ovalnem pladnju, kolekcija Flow v odtenkih kave"></div>
-    <div class="mala" data-pov><img src="img/modri-1.jpg" alt="Visok lonček v dveh odtenkih modre"></div>
-    <figcaption>Posodica s kupolo, Flow</figcaption>
-  </figure>
-  <div class="drsnik"><i></i>Drsi</div>
+      </figure>
 </section>
 
 <section class="izjava svetla">
   <div class="w">
-    <div class="nad">Atelje</div>
-    <p id="izjava">Preprosti predmeti za vsakdan <span class="mini"><img src="img/bele-posodice.jpg" alt=""></span> iz materiala, ki je videti kot kamen, v roki pa je <em>lahek, gladek</em> in prijazen okolju. Nobena dva nista enaka.</p>
+    <div class="nad">O materialu</div>
+    <p id="izjava">Jesmonite je na pogled kot kamen, v roki pa je lažji in gladkejši. Vsak kos ulijemo posebej, zato tudi dva iz istega seta nista čisto enaka.</p>
   </div>
 </section>
 
 <section class="kolekciji" id="kolekciji">
   <div class="w">
     <div class="kol-glava">
-      <div><div class="nad an-up">Kolekciji</div><h2 class="an-up">Dva značaja, <em>en material.</em></h2></div>
-      <p class="an-up">Kose iz obeh kolekcij lahko poljubno združiš v en set. Pure Form za mir, Flow za igro barv.</p>
+      <div><div class="nad an-up">Kolekciji</div><h2 class="an-up">Dve kolekciji</h2></div>
+      <p class="an-up">Pure Form je v eni barvi, Flow v več barvah, ki se med ulivanjem prelijejo. Kose iz obeh lahko združiš v isti set.</p>
     </div>
     <div class="panela">
       <a class="panel an-clip" href="#po-meri"><img src="img/bel-set.jpg" alt="Bel set Pure Form na zrcalu">
-        <div class="vzorec"><i style="background:#F3F0EA"></i><i style="background:#E4B2B8"></i><i style="background:#DCCBB6"></i></div>
-        <div class="vsebina"><div class="nad">Ena barva</div><h3>Pure Form</h3><p>Rebrasta površina, ki lovi svetlobo, in en sam odtenek po izbiri. Mirno, klasično, brezčasno.</p><span class="povezava">Izberi odtenek <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></span></div>
+        <div class="vsebina"><div class="nad">Ena barva</div><h3>Pure Form</h3><p>Rebrasti kosi v enem odtenku: bela, pesek, roza ali barva po tvoji izbiri.</p><span class="povezava">Izberi odtenek <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></span></div>
       </a>
       <a class="panel an-clip" href="#po-meri"><img src="img/rumen-set.jpg" alt="Flow set v sončno rumeni">
-        <div class="vzorec"><i style="background:#EBC85A"></i><i style="background:#6A95C4"></i><i style="background:#8E5E4B"></i></div>
-        <div class="vsebina"><div class="nad">Prelivanje barv</div><h3><em>Flow</em></h3><p>Odtenki se med ulivanjem prelijejo kot marmor, zato je vsak kos edinstven. Od kave do sončnega zahoda.</p><span class="povezava">Sestavi kombinacijo <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></span></div>
+        <div class="vsebina"><div class="nad">Več barv</div><h3>Flow</h3><p>Dve ali več barv, prelitih kot marmor. Vsak kos je zato malo drugačen.</p><span class="povezava">Izberi barve <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></span></div>
       </a>
     </div>
     <div class="trak-kol">
@@ -305,17 +296,17 @@ footer{background:#0C0A08;color:#9C8E7F;padding:90px 0 120px;font-size:14px}
 <section class="predmeti" id="predmeti">
   <div class="pr-ovoj" id="prOvoj">
     <div class="w pr-glava">
-      <div><div class="nad">Predmeti</div><h2>Za kopalnico, mizo <em>in polico.</em></h2></div>
-      <p>Vsak predmet je na voljo v obeh kolekcijah. Ob nakupu treh ali več obračunamo popust.</p>
+      <div><div class="nad">Za kopalnico, mizo in polico</div><h2>Predmeti</h2></div>
+      <p>Vse je na voljo v obeh kolekcijah. Pri treh ali več kosih je popust.</p>
     </div>
     <div class="pr-trak" id="prTrak">
       <article class="kos"><div class="okvir" data-pov><img src="img/rjav-set.jpg" alt="Okrogel in ovalni pladenj s posodico"></div><h3>Pladenj</h3><p>Okrogel ali ovalni. Podlaga za set, nakit, sveče ali drobnarije.</p></article>
-      <article class="kos"><div class="okvir" data-pov><img src="img/rumena-posodica.jpg" alt="Posodica s pokrovom"></div><h3>Posodica s pokrovom</h3><p>Za drobne stvari, ki jih želiš imeti pri roki, a ne na očeh.</p></article>
+      <article class="kos"><div class="okvir" data-pov><img src="img/rumena-posodica.jpg" alt="Posodica s pokrovom"></div><h3>Posodica s pokrovom</h3><p>Okrogla, z rebrastim pokrovom. Za nakit, sponke ali vatirane palčke.</p></article>
       <article class="kos"><div class="okvir" data-pov><img src="img/modri-2.jpg" alt="Visok lonček s pokrovom"></div><h3>Visok lonček</h3><p>Za čopiče, zobne ščetke ali pisala. Po želji z ujemajočim pokrovom.</p></article>
-      <article class="kos"><div class="okvir" data-pov><img src="img/skrinjica-2.jpg" alt="Posodica s kupolo"></div><h3>Posodica s kupolo</h3><p>Rebrasta, s pokrovom v obliki kupole. Lepa sama ali v setu.</p></article>
+      <article class="kos"><div class="okvir" data-pov><img src="img/skrinjica-2.jpg" alt="Posodica s kupolo"></div><h3>Posodica s kupolo</h3><p>Rebrasta, s pokrovom v obliki kupole in ročajem na vrhu.</p></article>
       <article class="kos"><div class="okvir" data-pov><img src="img/dozirnik-visok.jpg" alt="Dozirnik s črno pumpico"></div><h3>Dozirnik</h3><p>Za milo, losjon ali olje. Črna, zlata ali srebrna pumpica.</p></article>
       <article class="kos"><div class="okvir" data-pov><img src="img/vaza.jpg" alt="Vaza v kavni kombinaciji"></div><h3>Vaza</h3><p>Za suho cvetje ali kot samostojen kos na polici.</p></article>
-      <article class="kos konec"><p>Cenik pošljemo na povpraševanje, skupaj s predlogom za tvoj set.</p><a class="povezava" href="#po-meri">Sestavi set <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></a></article>
+      <article class="kos konec"><p>Cene pošljemo skupaj s predlogom za tvoj set.</p><a class="povezava" href="#po-meri">Sestavi set <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></a></article>
     </div>
     <div class="pr-napredek"><i id="prNap"></i></div>
   </div>
@@ -325,9 +316,9 @@ footer{background:#0C0A08;color:#9C8E7F;padding:90px 0 120px;font-size:14px}
   <div class="w meri-g">
     <div>
       <div class="nad an-up">Naročila po meri</div>
-      <h2 class="an-up">Ti prineseš idejo, <em>mi jo ulijemo.</em></h2>
-      <p class="citat an-up">»Ne gre več le za kolekcije. Gre za ustvarjanje kosa, ki si ga zamisliš ti.«</p>
-      <p class="uvodnik an-up">Rojstni dan v zlati in črni, set v barvah kopalnice ali darilo, ki se ujema s stanovanjem prijateljice. Izberi predmete in odtenke, mi pa ti pošljemo predlog in ceno.</p>
+      <h2 class="an-up">Naročilo po meri</h2>
+      <p class="citat an-up">»Ti prineseš idejo, mi pa jo z veliko pozornosti oživimo.«</p>
+      <p class="uvodnik an-up">Za rojstni dan s temo »zlato-črno« smo naredili cel set v teh dveh barvah. Povej, kaj imaš v mislih, in pošljemo ti predlog s ceno.</p>
       <div class="meri-f">
         <figure class="p an-clip" data-pov><img src="img/lonec-pladenj.jpg" alt="Visok lonček na ovalnem pladnju"></figure>
         <figure class="q an-clip" data-pov><img src="img/roza-2.jpg" alt="Rožnat set posodic"></figure>
@@ -335,7 +326,7 @@ footer{background:#0C0A08;color:#9C8E7F;padding:90px 0 120px;font-size:14px}
     </div>
     <form class="obrazec an-up" id="obrazec" novalidate>
       <h3>Sestavi svoj set</h3>
-      <p class="pod">Neobvezno povpraševanje. Odgovorimo s predlogom in ceno.</p>
+      <p class="pod">Povpraševanje je neobvezno.</p>
       <div class="vrsta"><span class="oznaka">Predmeti</span>
         <div class="izbire" id="izbPred">
           <button type="button" data-v="pladenj">Pladenj</button>
@@ -378,14 +369,13 @@ footer{background:#0C0A08;color:#9C8E7F;padding:90px 0 120px;font-size:14px}
 <section class="material svetla" id="material">
   <div class="w mat-g">
     <div>
-      <div class="nad an-up">Material</div>
-      <h2 class="an-up">Jesmonite<em>.</em></h2>
-      <p class="uvodnik an-up">Sodoben material iz naravnih mineralov in akrilne osnove na vodni osnovi. Na videz kot kamen ali beton, v roki lažji in gladkejši.</p>
+      <div class="nad an-up">Iz česa so</div>
+      <h2 class="an-up">Jesmonite</h2>
+      <p class="uvodnik an-up">Mešanica mineralnega prahu in akrilne tekočine na vodni osnovi. Ne vsebuje smole in topil, zato ne smrdi in je primeren za zaprte prostore.</p>
       <dl>
-        <div class="an-up"><dt>Netoksičen</dt><dd>Brez smole, topil in neprijetnih vonjav, primeren za zaprte prostore.</dd></div>
-        <div class="an-up"><dt>Vzdržljiv</dt><dd>Močan in lahek, hkrati nekoliko prožen, zato odličen za drobne detajle.</dd></div>
-        <div class="an-up"><dt>Prijazen okolju</dt><dd>Prijaznejša alternativa betonu in epoksi smoli.</dd></div>
-        <div class="an-up"><dt>Nega</dt><dd>Ni povsem vodoodporen, zato kose za stik z vodo, kot so dozirniki, dodatno zaščitimo.</dd></div>
+        <div class="an-up"><dt>Vzdržljiv</dt><dd>Je močan in lahek ter malo prožen, zato zdrži tudi tanke robove in rebra.</dd></div>
+        <div class="an-up"><dt>Okolju prijaznejši</dt><dd>Od betona in epoksi smole.</dd></div>
+        <div class="an-up"><dt>Nega</dt><dd>Ni povsem vodoodporen. Kose, ki pridejo v stik z vodo, kot so dozirniki, dodatno zaščitimo.</dd></div>
       </dl>
     </div>
     <figure class="mat-f an-clip" data-pov><img class="par" src="img/okrogel-pladenj.jpg" alt="Okrogel pladenj z marmornim vzorcem"></figure>
@@ -395,7 +385,7 @@ footer{background:#0C0A08;color:#9C8E7F;padding:90px 0 120px;font-size:14px}
 <section class="galerija">
   <div class="w">
     <div class="gal-glava">
-      <div><div class="nad an-up">Iz ateljeja</div><h2 class="an-up">Kosi, ki so <em>našli dom.</em></h2></div>
+      <div><div class="nad an-up">Instagram</div><h2 class="an-up">Iz ateljeja</h2></div>
       <a class="povezava an-up" href="https://www.instagram.com/the.adele.studio/" target="_blank" rel="noopener" style="color:var(--sampanjec)">@the.adele.studio <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></a>
     </div>
     <div class="mreza">
@@ -414,9 +404,9 @@ footer{background:#0C0A08;color:#9C8E7F;padding:90px 0 120px;font-size:14px}
 <section class="konec">
   <img class="par" src="img/rumen-set-2.jpg" alt="">
   <div class="t">
-    <div class="nad an-up">Za dom ali za darilo</div>
-    <h2 class="an-up">Povej nam odtenke, <em>ostalo ulijemo mi.</em></h2>
-    <p class="an-up">Vsak kos je ulit ročno in skrbno zapakiran. Pošlji povpraševanje ali nam piši na Instagram.</p>
+    <div class="nad an-up">Naročilo</div>
+    <h2 class="an-up">Imaš idejo za set?</h2>
+    <p class="an-up">Izberi kose in barve v obrazcu ali nam piši na Instagram. Odgovorimo s predlogom in ceno.</p>
     <div class="akcije an-up"><a class="gumb" href="#po-meri"><span>Sestavi svoj set</span></a><a class="povezava" href="https://ig.me/m/the.adele.studio" target="_blank" rel="noopener">Piši na Instagram <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></a></div>
   </div>
 </section>
@@ -433,7 +423,6 @@ footer{background:#0C0A08;color:#9C8E7F;padding:90px 0 120px;font-size:14px}
 </footer>
 
 <div class="mob" id="mob"><a class="gumb" href="#po-meri"><span>Sestavi svoj set</span></a></div>
-<div class="kazalec" id="kazalec">Poglej</div>
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Povečana fotografija"><button class="x" type="button">Zapri</button><button class="l" type="button">Nazaj</button><img alt=""><button class="d" type="button">Naprej</button><p></p></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -446,11 +435,6 @@ const glava=$('glava'),mob=$('mob'),meri=$('po-meri');
 function tick(){const y=scrollY,vh=innerHeight;glava.classList.toggle('on',y>30);const r=meri.getBoundingClientRect();mob.classList.toggle('skrit',y<vh*.7||(r.top<vh&&r.bottom>0))}
 addEventListener('scroll',tick,{passive:true});tick();
 
-const iz=$('izjava');
-[...iz.childNodes].forEach(n=>{if(n.nodeType===3){const f=document.createDocumentFragment();n.textContent.split(/(\s+)/).forEach(t=>{if(!t.trim()){f.append(t);return}const s=document.createElement('span');s.className='beseda';s.textContent=t;f.append(s)});n.replaceWith(f)}else if(n.nodeType===1){n.classList.add('beseda')}});
-const besede=[...iz.querySelectorAll('.beseda')];
-function izjava(){const r=iz.getBoundingClientRect(),vh=innerHeight;const p=Math.min(1,Math.max(0,(vh*.85-r.top)/(r.height+vh*.35)));const n=Math.round(p*besede.length);besede.forEach((b,i)=>b.classList.toggle('on',i<n))}
-addEventListener('scroll',izjava,{passive:true});izjava();
 
 if(gibanje){
   gsap.registerPlugin(ScrollTrigger);
@@ -458,7 +442,6 @@ if(gibanje){
   gsap.from('.uvod h1 .vr>span',{yPercent:110,duration:1.6,ease:E,stagger:.12,delay:.15});
   gsap.from('.uvod .an-up',{y:30,opacity:0,duration:1.4,ease:E,stagger:.12,delay:.5});
   gsap.from('.uvod-f .glavna',{clipPath:'inset(0 0 0 100%)',duration:1.8,ease:'expo.inOut'});
-  gsap.from('.uvod-f .mala',{y:80,opacity:0,duration:1.6,ease:E,delay:.9});
   gsap.utils.toArray('.an-up').filter(e=>!e.closest('.uvod')).forEach(el=>gsap.from(el,{y:40,opacity:0,duration:1.4,ease:E,scrollTrigger:{trigger:el,start:'top 92%'}}));
   gsap.utils.toArray('.an-clip').forEach(el=>{gsap.from(el,{clipPath:'inset(16% 0 0 0)',duration:1.6,ease:E,scrollTrigger:{trigger:el,start:'top 90%'}});const im=el.querySelector('img');if(im&&!im.classList.contains('par'))gsap.from(im,{scale:1.22,duration:2,ease:E,scrollTrigger:{trigger:el,start:'top 90%'}})});
   gsap.utils.toArray('img.par').forEach(im=>gsap.fromTo(im,{yPercent:-8},{yPercent:4,ease:'none',scrollTrigger:{trigger:im.parentElement,start:'top bottom',end:'bottom top',scrub:true}}));
@@ -469,12 +452,6 @@ if(gibanje){
   addEventListener('load',()=>ScrollTrigger.refresh());
 }
 
-const kz=$('kazalec');
-if(matchMedia('(hover:hover)').matches){
-  let tx=0,ty=0,x=0,y=0;addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});
-  (function zanka(){x+=(tx-x)*.18;y+=(ty-y)*.18;kz.style.left=x+'px';kz.style.top=y+'px';requestAnimationFrame(zanka)})();
-  document.querySelectorAll('[data-pov]').forEach(el=>{el.addEventListener('mouseenter',()=>kz.classList.add('on'));el.addEventListener('mouseleave',()=>kz.classList.remove('on'))});
-}
 
 const pred=new Set(),bar=new Set();let kol='Pure Form';
 const nastavi=(el,v,on)=>el.querySelector(`[data-v="${v}"]`).setAttribute('aria-pressed',on);
@@ -497,7 +474,7 @@ povz();
 (()=>{const lb=$('lb'),li=lb.querySelector('img'),lp=lb.querySelector('p');
 const el=[...document.querySelectorAll('[data-pov]')];const sl=el.map(e=>e.querySelector('img')||e);let i=0;
 function pokazi(k){i=(k+sl.length)%sl.length;li.src=sl[i].src;li.alt=sl[i].alt;lp.textContent=sl[i].alt}
-el.forEach((e,k)=>e.addEventListener('click',ev=>{ev.preventDefault();pokazi(k);lb.classList.add('on');kz.classList.remove('on');document.body.style.overflow='hidden'}));
+el.forEach((e,k)=>e.addEventListener('click',ev=>{ev.preventDefault();pokazi(k);lb.classList.add('on');document.body.style.overflow='hidden'}));
 function zapri(){lb.classList.remove('on');document.body.style.overflow=''}
 lb.querySelector('.x').onclick=zapri;lb.querySelector('.l').onclick=e=>{e.stopPropagation();pokazi(i-1)};lb.querySelector('.d').onclick=e=>{e.stopPropagation();pokazi(i+1)};
 lb.addEventListener('click',e=>{if(e.target===lb)zapri()});
