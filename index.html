@@ -56,7 +56,7 @@ header.on{top:0;background:rgba(21,17,14,.84);backdrop-filter:blur(16px) saturat
 .znak b{font-family:var(--serif);font-weight:300;font-size:30px;letter-spacing:.3em;padding-left:.3em}
 .hd .desno{justify-self:end}
 .hd .gumb{height:44px;padding:0 24px;font-size:10.5px}
-@media(max-width:1180px){.hd nav{display:none}}
+@media(max-width:1180px){.hd{grid-template-columns:auto 1fr}.hd nav{display:none}.znak{text-align:left}}
 @media(max-width:900px){.hd{grid-template-columns:auto 1fr;height:72px}.hd nav{display:none}.znak{text-align:left}.znak b{font-size:24px}}
 
 .uvod{position:relative;min-height:100svh;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);overflow:hidden}
