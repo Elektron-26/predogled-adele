@@ -7,326 +7,335 @@
 <title>Studio Adéle · Ročno uliti kosi iz jesmonita · Maribor</title>
 <meta name="description" content="Pladnji, posodice, lončki, vaze in dozirniki, ročno uliti iz jesmonita. Kolekciji Pure Form in Flow ter naročila po meri. Studio Adéle, Maribor.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --papir:#F4F0EA;--kamen:#E7E0D5;--bela:#FAF8F4;
-  --oglje:#23201D;--siva:#76695F;--crta:rgba(35,32,29,.16);
-  --glina:#8E5E4B;
-  --serif:"Cormorant Garamond",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif;
-  --ease:cubic-bezier(.16,1,.3,1);color-scheme:light}
+  --noc:#15110E;--noc2:#1E1915;
+  --slon:#F2EBE0;--slon2:#E8DDCD;
+  --sampanjec:#CDA67C;--bron:#A9784F;--glina:#5B2F22;
+  --crta-t:rgba(242,235,224,.16);--crta-s:rgba(21,17,14,.14);
+  --siva-t:#B3A595;--siva-s:#6F6256;
+  --serif:"Cormorant Garamond",Georgia,serif;--sans:"Hanken Grotesk",system-ui,sans-serif;
+  --expo:cubic-bezier(.16,1,.3,1);color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:clip}
-body{margin:0;background:var(--papir);color:var(--oglje);font-family:var(--sans);font-size:15.5px;line-height:1.75;letter-spacing:.005em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--noc);color:var(--slon);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:200;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 img{display:block;max-width:100%}
 a{color:inherit}
 p{margin:0}
-h1,h2,h3{font-family:var(--serif);font-weight:300;margin:0;line-height:.98;letter-spacing:-.02em}
+h1,h2,h3{font-family:var(--serif);font-weight:300;margin:0;line-height:.95;letter-spacing:-.025em}
 em{font-style:italic}
-.w{max-width:1320px;margin:0 auto;padding:0 clamp(22px,4vw,56px)}
-.nad{font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--siva)}
-.povezava{display:inline-flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;padding-bottom:6px;border-bottom:1px solid currentColor;transition:gap .5s var(--ease)}
-.povezava:hover{gap:22px}
-.povezava svg{width:22px;height:10px}
-a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:1px solid var(--oglje);outline-offset:4px}
+.w{max-width:1360px;margin:0 auto;padding:0 clamp(22px,4.5vw,64px)}
+.nad{font-size:11px;font-weight:400;letter-spacing:.34em;text-transform:uppercase;color:var(--sampanjec)}
+.nad::before{content:"";display:inline-block;width:34px;height:1px;background:currentColor;vertical-align:middle;margin-right:14px}
+.svetla{background:var(--slon);color:var(--noc);color-scheme:light}
+.svetla .nad{color:var(--bron)}
+.povezava{display:inline-flex;align-items:center;gap:16px;font-size:11.5px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;padding:6px 0;position:relative}
+.povezava::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform-origin:right;transition:transform .7s var(--expo)}
+.povezava:hover::after{transform:scaleX(.35)}
+.povezava svg{width:26px;height:10px;transition:transform .7s var(--expo)}
+.povezava:hover svg{transform:translateX(6px)}
+.gumb{display:inline-flex;align-items:center;justify-content:center;gap:14px;height:60px;padding:0 38px;background:var(--sampanjec);color:var(--noc);text-decoration:none;font-size:11.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;border:0;cursor:pointer;position:relative;overflow:hidden;font-family:var(--sans)}
+.gumb::before{content:"";position:absolute;inset:0;background:var(--slon);transform:translateY(101%);transition:transform .6s var(--expo)}
+.gumb:hover::before{transform:none}
+.gumb span{position:relative}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:1px solid var(--sampanjec);outline-offset:4px}
 
-.predogled{background:var(--oglje);color:#CFC5BA;text-align:center;font-size:11.5px;letter-spacing:.12em;padding:9px 16px}
+.predogled{background:#0C0A08;color:#9C8E7F;text-align:center;font-size:11px;letter-spacing:.14em;padding:9px 16px;position:relative;z-index:61}
+.predogled b{color:var(--sampanjec);font-weight:400}
 
-/* glava */
-header{position:sticky;top:0;z-index:40;background:rgba(244,240,234,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:box-shadow .4s}
-header.on{box-shadow:0 1px 0 var(--crta)}
-.hd{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:84px}
-.hd nav{display:flex;gap:34px}
-.hd nav a,.hd .desno a{font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none}
-.hd nav a{opacity:.75;transition:opacity .3s}
-.hd nav a:hover{opacity:1}
-.znak{text-decoration:none;text-align:center;line-height:1}
-.znak small{display:block;font-family:var(--serif);font-size:9.5px;letter-spacing:.62em;padding-left:.62em;margin-bottom:3px}
-.znak b{font-family:var(--serif);font-weight:300;font-size:30px;letter-spacing:.26em;padding-left:.26em}
+header{position:fixed;left:0;right:0;top:34px;z-index:60;transition:top .5s var(--expo),background .5s}
+header.on{top:0;background:rgba(21,17,14,.84);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid var(--crta-t)}
+.hd{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:86px}
+.hd nav{display:flex;gap:36px}
+.hd nav a{font-size:11px;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;color:var(--siva-t);transition:color .4s}
+.hd nav a:hover{color:var(--slon)}
+.znak{text-decoration:none;text-align:center;line-height:1;color:var(--slon)}
+.znak small{display:block;font-family:var(--serif);font-size:9.5px;letter-spacing:.7em;padding-left:.7em;margin-bottom:4px;color:var(--sampanjec)}
+.znak b{font-family:var(--serif);font-weight:300;font-size:30px;letter-spacing:.3em;padding-left:.3em}
 .hd .desno{justify-self:end}
-.hd .desno a{border-bottom:1px solid currentColor;padding-bottom:4px}
-@media(max-width:860px){.hd{grid-template-columns:auto 1fr;height:70px}.hd nav{display:none}.znak{text-align:left}.znak b{font-size:25px}}
+.hd .gumb{height:44px;padding:0 24px;font-size:10.5px}
+@media(max-width:900px){.hd{grid-template-columns:auto 1fr;height:72px}.hd nav{display:none}.znak{text-align:left}.znak b{font-size:24px}}
 
-/* uvod */
-.uvod{display:grid;grid-template-columns:5fr 7fr;min-height:calc(100svh - 120px)}
-.uvod-t{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(40px,6vw,90px) clamp(22px,4vw,64px) clamp(40px,5vw,64px) clamp(22px,max(4vw,(100vw - 1320px)/2 + 56px),400px)}
-.uvod h1{font-size:clamp(58px,7.6vw,124px);margin:28px 0 34px}
-.uvod h1 em{color:var(--glina)}
-.uvod .opis{max-width:36ch;color:var(--siva);font-size:16px;margin-bottom:44px}
-.uvod-spodaj{display:flex;justify-content:space-between;align-items:end;gap:20px;padding-top:28px;border-top:1px solid var(--crta);margin-top:60px;font-size:13px;color:var(--siva)}
-.uvod-spodaj span b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;color:var(--oglje);letter-spacing:0}
-.uvod-f{position:relative;overflow:hidden;background:var(--kamen)}
-.uvod-f img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:umir 2.6s var(--ease) forwards}
-@keyframes umir{to{transform:scale(1)}}
-.uvod-f figcaption{position:absolute;right:24px;bottom:22px;font-family:var(--serif);font-style:italic;font-size:17px;color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.35)}
-@media(max-width:900px){.uvod{grid-template-columns:1fr;min-height:0}.uvod-f{order:-1;aspect-ratio:4/5}.uvod-t{padding-top:44px}}
+.uvod{position:relative;min-height:100svh;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);overflow:hidden}
+.uvod-t{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:170px clamp(22px,4.5vw,64px) 100px max(clamp(22px,4.5vw,64px),calc((100vw - 1360px)/2 + 64px))}
+.uvod h1{font-size:clamp(64px,8.8vw,150px);margin:34px 0 36px}
+.uvod h1 .vr{display:block;overflow:hidden;padding-bottom:.06em}
+.uvod h1 .vr>span{display:block}
+.uvod h1 em{color:var(--sampanjec)}
+.uvod .opis{max-width:38ch;color:var(--siva-t);font-size:17px;margin-bottom:48px}
+.akcije{display:flex;flex-wrap:wrap;align-items:center;gap:22px 36px}
+.uvod-f{position:relative;margin:0}
+.uvod-f .glavna{position:absolute;inset:0;overflow:hidden}
+.uvod-f .glavna img{width:100%;height:115%;object-fit:cover;object-position:center 40%}
+.uvod-f .glavna::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--noc) 0%,rgba(21,17,14,0) 22%),linear-gradient(0deg,rgba(21,17,14,.55),rgba(21,17,14,0) 30%)}
+.uvod-f .mala{position:absolute;left:-9%;bottom:12%;width:clamp(150px,15vw,240px);aspect-ratio:3/4;overflow:hidden;z-index:3;outline:1px solid rgba(205,166,124,.5);outline-offset:10px}
+.uvod-f .mala img{width:100%;height:100%;object-fit:cover}
+.uvod-f figcaption{position:absolute;right:clamp(22px,4.5vw,64px);bottom:40px;z-index:3;font-family:var(--serif);font-style:italic;font-size:18px;color:var(--slon)}
+.uvod-f figcaption::before{content:"";display:inline-block;width:40px;height:1px;background:var(--sampanjec);vertical-align:middle;margin-right:14px}
+.drsnik{position:absolute;left:max(clamp(22px,4.5vw,64px),calc((100vw - 1360px)/2 + 64px));bottom:34px;z-index:3;display:flex;align-items:center;gap:14px;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--siva-t)}
+.drsnik i{width:1px;height:44px;background:linear-gradient(var(--sampanjec),transparent);animation:kapljica 2.4s var(--expo) infinite}
+@keyframes kapljica{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-width:900px){.uvod{grid-template-columns:1fr;min-height:0}.uvod-f{order:-1;height:78svh}.uvod-f .glavna::after{background:linear-gradient(0deg,var(--noc) 0%,rgba(21,17,14,0) 45%)}.uvod-f .mala{left:auto;right:22px;bottom:-40px;width:120px}.uvod-t{padding-top:50px}.drsnik{display:none}.uvod-f figcaption{left:22px;right:auto;bottom:24px}}
 
-/* izjava */
-.izjava{padding:clamp(110px,15vw,220px) 0;text-align:center}
-.izjava p{font-family:var(--serif);font-weight:300;font-size:clamp(32px,4.1vw,62px);line-height:1.18;max-width:20ch;margin:0 auto;letter-spacing:-.01em}
-.izjava p em{color:var(--glina)}
-.izjava .mini{display:inline-block;width:1.5em;height:1.05em;vertical-align:-.14em;margin:0 .12em;overflow:hidden;border-radius:999px}
+.izjava{padding:clamp(120px,15vw,230px) 0}
+.izjava .w{display:grid;grid-template-columns:2fr 10fr;gap:40px}
+.izjava p{font-family:var(--serif);font-weight:300;font-size:clamp(34px,4.4vw,70px);line-height:1.14;letter-spacing:-.015em}
+.izjava p em{color:var(--bron)}
+.izjava .mini{display:inline-block;width:1.6em;height:1em;vertical-align:-.1em;margin:0 .14em;overflow:hidden;border-radius:999px}
 .izjava .mini img{width:100%;height:100%;object-fit:cover}
-.izjava .nad{margin-bottom:40px}
+.izjava .beseda{opacity:.14;transition:opacity .4s}
+.izjava .beseda.on{opacity:1}
+@media(max-width:900px){.izjava .w{grid-template-columns:1fr}}
 
-/* kolekcija */
-.kol{padding-bottom:clamp(110px,14vw,200px)}
-.kol-velika{position:relative;height:min(92svh,900px);overflow:hidden;background:var(--kamen)}
-.kol-velika img{width:100%;height:100%;object-fit:cover}
-.kol-velika .napis{position:absolute;left:clamp(22px,4vw,56px);bottom:clamp(26px,4vw,52px);color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.25)}
-.kol-velika .nad{color:rgba(255,255,255,.85)}
-.kol-velika h2{font-size:clamp(70px,11vw,180px);margin-top:10px}
-.kol-g{display:grid;grid-template-columns:4fr 3fr 4fr;gap:clamp(20px,3vw,48px);margin-top:clamp(60px,8vw,110px);align-items:start}
-.kol-g .besedilo{padding-top:30px}
-.kol-g .besedilo h3{font-size:clamp(32px,3vw,44px);line-height:1.08;margin-bottom:24px}
-.kol-g .besedilo p{color:var(--siva);max-width:38ch}
-.kol-g .besedilo .povezava{margin-top:36px}
-.kol-g figure{margin:0}
-.kol-g figure .okvir{overflow:hidden;background:var(--kamen)}
-.kol-g figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
-.kol-g figure:hover img{transform:scale(1.035)}
-.kol-g figcaption{display:flex;justify-content:space-between;margin-top:14px;font-size:12.5px;color:var(--siva)}
-.kol-g figcaption b{font-family:var(--serif);font-weight:400;font-size:19px;color:var(--oglje)}
-.kol-g .a .okvir{aspect-ratio:4/5}
-.kol-g .b{margin-top:clamp(80px,12vw,180px)}
-.kol-g .b .okvir{aspect-ratio:3/4}
-.kol-g.zrcalo{grid-template-columns:4fr 3fr 4fr}
-@media(max-width:900px){.kol-velika{height:auto;aspect-ratio:4/5}.kol-g,.kol-g.zrcalo{grid-template-columns:1fr 1fr}.kol-g .besedilo{grid-column:1/3;order:-1;padding-top:0}.kol-g .b{margin-top:60px}}
+.kolekciji{padding:clamp(110px,13vw,190px) 0}
+.kol-glava{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:clamp(50px,6vw,80px)}
+.kol-glava h2{font-size:clamp(56px,7vw,120px);margin-top:26px}
+.kol-glava h2 em{color:var(--sampanjec)}
+.kol-glava p{max-width:40ch;color:var(--siva-t)}
+.panela{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,1.6vw,24px)}
+.panel{position:relative;display:block;height:min(88svh,860px);overflow:hidden;text-decoration:none;color:var(--slon);background:var(--noc2)}
+.panel>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 1.8s var(--expo)}
+.panel:hover>img{transform:scale(1.1)}
+.panel::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,12,10,.86) 0%,rgba(15,12,10,.25) 42%,rgba(15,12,10,0) 70%)}
+.panel .vsebina{position:absolute;left:clamp(24px,3vw,44px);right:clamp(24px,3vw,44px);bottom:clamp(28px,3.4vw,50px);z-index:2}
+.panel h3{font-size:clamp(64px,7.4vw,124px)}
+.panel p{max-width:36ch;color:#D9CCBC;margin:16px 0 26px;font-size:15.5px}
+.panel .povezava{color:var(--sampanjec)}
+.panel .vzorec{position:absolute;top:clamp(24px,3vw,44px);right:clamp(24px,3vw,44px);z-index:2;display:flex;gap:8px}
+.panel .vzorec i{width:14px;height:14px;border-radius:50%;border:1px solid rgba(255,255,255,.4)}
+@media(max-width:900px){.panela{grid-template-columns:1fr}.panel{height:78svh}}
+.trak-kol{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.6vw,24px);margin-top:clamp(14px,1.6vw,24px)}
+.trak-kol figure{margin:0}
+.trak-kol .okvir{aspect-ratio:4/5;overflow:hidden;background:var(--noc2)}
+.trak-kol img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--expo)}
+.trak-kol figure:hover img{transform:scale(1.06)}
+.trak-kol figcaption{margin-top:14px;display:flex;justify-content:space-between;gap:10px;font-size:12.5px;color:var(--siva-t)}
+.trak-kol figcaption b{font-family:var(--serif);font-weight:400;font-size:20px;color:var(--slon)}
+@media(max-width:900px){.trak-kol{grid-template-columns:1fr 1fr}.trak-kol figcaption{flex-direction:column;gap:0}}
 
-.kamen{background:var(--kamen)}
-.kamen .kol-g figure .okvir{background:#DDD4C7}
+.predmeti{position:relative;background:var(--slon);color:var(--noc);color-scheme:light}
+.predmeti .nad{color:var(--bron)}
+.pr-ovoj{height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.pr-glava{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:clamp(26px,4vh,46px)}
+.pr-glava h2{font-size:clamp(52px,6vw,100px);margin-top:22px}
+.pr-glava h2 em{color:var(--bron)}
+.pr-glava p{max-width:36ch;color:var(--siva-s);font-size:15px}
+.pr-trak{display:flex;gap:clamp(18px,2vw,30px);padding:0 clamp(22px,4.5vw,64px);width:max-content}
+.kos{width:clamp(260px,26vw,400px);flex:none}
+.kos .okvir{overflow:hidden;background:var(--slon2);height:min(56vh,500px)}
+.kos img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--expo)}
+.kos:hover img{transform:scale(1.06)}
+.kos h3{font-size:clamp(30px,2.6vw,40px);margin:20px 0 6px}
+.kos p{font-size:14.5px;color:var(--siva-s);max-width:34ch}
+.kos.konec{display:flex;flex-direction:column;justify-content:center;padding:0 30px;border-left:1px solid var(--crta-s)}
+.kos.konec p{font-family:var(--serif);font-size:30px;line-height:1.2;color:var(--noc);margin-bottom:30px}
+.kos.konec .povezava{color:var(--bron)}
+.pr-napredek{height:1px;background:var(--crta-s);margin:clamp(26px,4vh,46px) clamp(22px,4.5vw,64px) 0;position:relative}
+.pr-napredek i{position:absolute;inset:0;background:var(--noc);transform-origin:left;transform:scaleX(0)}
+@media(max-width:900px){.pr-ovoj{height:auto;padding:110px 0}.pr-glava{flex-direction:column;align-items:start}.pr-trak{width:auto;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:20px}.kos{width:78vw;scroll-snap-align:start}.kos .okvir{height:auto;aspect-ratio:4/5}.kos.konec{width:70vw}.pr-napredek{display:none}}
 
-/* predmeti */
-.predmeti{padding:clamp(110px,14vw,200px) 0}
-.pred-top{display:grid;grid-template-columns:5fr 7fr;gap:40px;align-items:end;margin-bottom:70px}
-.pred-top h2{font-size:clamp(52px,6.4vw,104px)}
-.pred-top p{color:var(--siva);max-width:44ch;justify-self:end}
-.seznam{list-style:none;margin:0;padding:0;border-top:1px solid var(--crta)}
-.seznam li{display:grid;grid-template-columns:120px 1fr 1.2fr auto;gap:30px;align-items:center;padding:26px 0;border-bottom:1px solid var(--crta);cursor:zoom-in;transition:padding .6s var(--ease)}
-.seznam li:hover{padding-left:16px}
-.seznam .sl{width:120px;aspect-ratio:4/5;overflow:hidden;background:var(--kamen)}
-.seznam .sl img{width:100%;height:100%;object-fit:cover}
-.seznam h3{font-size:clamp(32px,3.4vw,50px)}
-.seznam p{color:var(--siva);font-size:14.5px}
-.seznam .kol-ime{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--siva);white-space:nowrap}
-.lebdeca{position:fixed;left:0;top:0;width:280px;aspect-ratio:4/5;pointer-events:none;z-index:30;opacity:0;transform:translate(-50%,-50%) scale(.92);transition:opacity .35s,transform .5s var(--ease);overflow:hidden}
-.lebdeca.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
-.lebdeca img{width:100%;height:100%;object-fit:cover}
-.pred-op{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-top:34px;font-size:13.5px;color:var(--siva)}
-.pred-op b{font-weight:500;color:var(--oglje)}
-
-@media(max-width:900px){.pred-top{grid-template-columns:1fr}.pred-top p{justify-self:start}.seznam li{grid-template-columns:96px 1fr;gap:6px 20px}.seznam .sl{grid-row:1/4;width:96px}.seznam .kol-ime{font-size:16px}}
-
-/* po meri */
-.meri{background:var(--bela);padding:clamp(110px,14vw,200px) 0}
-.meri-g{display:grid;grid-template-columns:5fr 6fr;gap:clamp(40px,7vw,120px);align-items:start}
-.meri h2{font-size:clamp(50px,6vw,96px);margin:26px 0 34px}
-.meri h2 em{color:var(--glina)}
-.meri .citat{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(24px,2.2vw,30px);line-height:1.35;padding-left:26px;border-left:1px solid var(--glina);margin-bottom:30px}
-.meri .uvodnik{color:var(--siva);max-width:42ch}
-.meri-f{display:grid;grid-template-columns:3fr 2fr;gap:14px;margin-top:56px;align-items:end}
-.meri-f figure{margin:0;overflow:hidden;background:var(--kamen)}
-.meri-f .p{aspect-ratio:4/5}.meri-f .q{aspect-ratio:3/4}
+.meri{background:var(--glina);padding:clamp(110px,13vw,190px) 0;position:relative;overflow:hidden}
+.meri::before{content:"";position:absolute;right:-20vw;top:-30vw;width:70vw;height:70vw;border-radius:50%;background:radial-gradient(circle,rgba(205,166,124,.18),rgba(205,166,124,0) 65%)}
+.meri-g{position:relative;display:grid;grid-template-columns:5fr 6fr;gap:clamp(40px,7vw,120px);align-items:start}
+.meri h2{font-size:clamp(54px,6.4vw,108px);margin:26px 0 34px}
+.meri h2 em{color:var(--sampanjec)}
+.meri .citat{font-family:var(--serif);font-style:italic;font-size:clamp(25px,2.3vw,32px);line-height:1.35;color:#F1E2D2;padding-left:26px;border-left:1px solid var(--sampanjec);margin-bottom:30px}
+.meri .uvodnik{color:#D8C0AE;max-width:42ch}
+.meri-f{position:relative;margin-top:60px;padding-bottom:18%}
+.meri-f figure{margin:0;overflow:hidden}
+.meri-f .p{width:76%;aspect-ratio:4/5}
+.meri-f .q{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:3/4;outline:1px solid rgba(205,166,124,.55);outline-offset:10px;overflow:visible}
+.meri-f .q img{outline:0}
 .meri-f img{width:100%;height:100%;object-fit:cover}
-.obrazec{border-top:1px solid var(--oglje)}
-.vrsta{padding:28px 0;border-bottom:1px solid var(--crta)}
-.vrsta>.nad{display:block;margin-bottom:16px}
-.izbire{display:flex;flex-wrap:wrap;gap:6px 26px}
-.izbire button{font-family:var(--serif);font-weight:400;font-size:24px;background:none;border:0;padding:2px 0;color:var(--siva);cursor:pointer;border-bottom:1px solid transparent;transition:color .3s,border-color .3s}
-.izbire button:hover{color:var(--oglje)}
-.izbire button[aria-pressed="true"]{color:var(--oglje);border-color:var(--oglje)}
-.odtenki{display:flex;flex-wrap:wrap;gap:14px 18px}
-.odtenki button{display:flex;flex-direction:column;align-items:center;gap:8px;background:none;border:0;padding:0;cursor:pointer;font-family:var(--sans);font-size:11px;letter-spacing:.08em;color:var(--siva)}
-.odtenki i{width:34px;height:34px;border-radius:50%;border:1px solid rgba(35,32,29,.14);display:block;transition:transform .4s var(--ease)}
-.odtenki button[aria-pressed="true"] i{box-shadow:0 0 0 3px var(--bela),0 0 0 4px var(--oglje)}
-.odtenki button[aria-pressed="true"]{color:var(--oglje)}
-.odtenki button:hover i{transform:scale(1.08)}
-.vrsta input,.vrsta textarea{width:100%;border:0;background:none;font-family:var(--serif);font-size:23px;color:var(--oglje);padding:4px 0;resize:none}
-.vrsta input::placeholder,.vrsta textarea::placeholder{color:#B3A89E}
+.obrazec{background:rgba(21,17,14,.28);border:1px solid rgba(242,235,224,.14);padding:clamp(26px,3.4vw,52px)}
+.obrazec h3{font-size:44px;margin-bottom:6px}
+.obrazec .pod{color:#D8C0AE;font-size:14.5px;margin-bottom:14px}
+.vrsta{padding:24px 0;border-bottom:1px solid rgba(242,235,224,.14)}
+.vrsta>.oznaka{display:block;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--sampanjec);margin-bottom:14px}
+.izbire{display:flex;flex-wrap:wrap;gap:8px}
+.izbire button{font-family:var(--serif);font-size:20px;background:transparent;border:1px solid rgba(242,235,224,.22);color:#E9DACB;padding:7px 16px 8px;cursor:pointer;transition:background .4s var(--expo),color .4s,border-color .4s}
+.izbire button:hover{border-color:var(--sampanjec)}
+.izbire button[aria-pressed="true"]{background:var(--slon);color:var(--glina);border-color:var(--slon)}
+.odtenki{display:flex;flex-wrap:wrap;gap:14px 16px}
+.odtenki button{display:flex;flex-direction:column;align-items:center;gap:8px;background:none;border:0;padding:0;cursor:pointer;font-family:var(--sans);font-size:11px;letter-spacing:.06em;color:#CDB3A1}
+.odtenki i{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:block;transition:transform .5s var(--expo)}
+.odtenki button:hover i{transform:scale(1.1)}
+.odtenki button[aria-pressed="true"] i{box-shadow:0 0 0 3px var(--glina),0 0 0 4px var(--sampanjec)}
+.odtenki button[aria-pressed="true"]{color:var(--slon)}
+.vrsta input,.vrsta textarea{width:100%;border:0;background:none;font-family:var(--serif);font-size:22px;color:var(--slon);padding:2px 0;resize:none}
+.vrsta input::placeholder,.vrsta textarea::placeholder{color:rgba(233,218,203,.45)}
 .vrsta input:focus,.vrsta textarea:focus{outline:0}
-.povzetek{padding:26px 0 6px;font-family:var(--serif);font-size:21px;line-height:1.45;min-height:70px}
-.povzetek small{display:block;font-family:var(--sans);font-size:13px;color:var(--glina);margin-top:6px}
-.poslji{margin-top:26px;width:100%;height:62px;background:var(--oglje);color:var(--papir);border:1px solid var(--oglje);font-family:var(--sans);font-size:12px;letter-spacing:.28em;text-transform:uppercase;cursor:pointer;transition:background .4s,color .4s}
-.poslji:hover{background:transparent;color:var(--oglje)}
+.povzetek{padding:24px 0 4px;font-family:var(--serif);font-size:21px;line-height:1.45;color:var(--slon);min-height:70px}
+.povzetek small{display:block;font-family:var(--sans);font-size:13px;color:var(--sampanjec);margin-top:6px}
+.obrazec .gumb{width:100%;margin-top:22px}
 .odziv{margin-top:20px;font-family:var(--serif);font-size:20px;display:none}
 .odziv.on{display:block}
-.odziv small{display:block;font-family:var(--sans);font-size:12.5px;color:var(--siva);margin-top:6px}
+.odziv small{display:block;font-family:var(--sans);font-size:12.5px;color:#CDB3A1;margin-top:6px}
 @media(max-width:900px){.meri-g{grid-template-columns:1fr}}
 
-/* material */
-.material{background:var(--oglje);color:#E9E2D8;padding:clamp(110px,14vw,200px) 0}
+.material{padding:clamp(110px,13vw,190px) 0}
 .mat-g{display:grid;grid-template-columns:6fr 5fr;gap:clamp(40px,7vw,120px);align-items:center}
-.material .nad{color:#9C9086}
-.material h2{font-size:clamp(54px,6.6vw,108px);margin:26px 0 30px}
-.material h2 em{color:#C9A792}
-.material .uvodnik{color:#B3A79B;max-width:44ch}
-.material dl{margin:56px 0 0}
-.material dl div{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:22px 0;border-top:1px solid rgba(233,226,216,.16)}
-.material dt{font-family:var(--serif);font-style:italic;font-size:26px;line-height:1.1;color:#fff}
-.material dd{margin:0;color:#B3A79B;font-size:14.5px}
-.mat-f{position:relative;padding-bottom:22%}
-.mat-f figure{margin:0;overflow:hidden}
-.mat-f .x{aspect-ratio:4/5;width:82%}
-.mat-f .y{position:absolute;right:0;bottom:0;width:52%;aspect-ratio:1;border:10px solid var(--oglje)}
-.mat-f img{width:100%;height:100%;object-fit:cover}
-@media(max-width:900px){.mat-g{grid-template-columns:1fr}.material dl div{grid-template-columns:1fr;gap:4px}}
+.material h2{font-size:clamp(60px,7.4vw,124px);margin:26px 0 30px}
+.material h2 em{color:var(--bron)}
+.material .uvodnik{color:var(--siva-s);max-width:44ch;font-size:17px}
+.material dl{margin:50px 0 0}
+.material dl div{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--crta-s)}
+.material dt{font-family:var(--serif);font-style:italic;font-size:28px;line-height:1.1}
+.material dd{margin:0;color:var(--siva-s);font-size:15px}
+.mat-f{position:relative;height:min(90svh,820px);overflow:hidden;margin:0}
+.mat-f img{width:100%;height:118%;object-fit:cover}
+@media(max-width:900px){.mat-g{grid-template-columns:1fr}.material dl div{grid-template-columns:1fr;gap:4px}.mat-f{height:auto;aspect-ratio:4/5}}
 
-/* galerija */
-.galerija{padding:clamp(110px,14vw,200px) 0 clamp(90px,10vw,140px)}
-.gal-top{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:56px}
-.gal-top h2{font-size:clamp(50px,6vw,96px)}
-.trak{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 clamp(22px,4vw,56px) 24px;scrollbar-width:thin;scrollbar-color:var(--oglje) transparent;cursor:grab}
-.trak.vlece{cursor:grabbing;scroll-snap-type:none}
-.trak figure{flex:none;margin:0;scroll-snap-align:start;width:clamp(240px,27vw,400px)}
-.trak figure:nth-child(3n+2){width:clamp(260px,34vw,520px)}
-.trak .okvir{aspect-ratio:4/5;overflow:hidden;background:var(--kamen)}
-.trak figure:nth-child(3n+2) .okvir{aspect-ratio:5/6}
-.trak img{width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none}
-.trak figcaption{margin-top:12px;font-family:var(--serif);font-style:italic;font-size:17px;color:var(--siva)}
-.gal-gumbi{display:flex;gap:10px}
-.gal-gumbi button{width:52px;height:52px;border:1px solid var(--crta);background:none;cursor:pointer;display:grid;place-items:center;transition:border-color .3s,background .3s}
-.gal-gumbi button:hover{border-color:var(--oglje)}
-.gal-gumbi svg{width:20px;height:10px}
+.galerija{padding:clamp(110px,13vw,190px) 0}
+.gal-glava{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:30px;margin-bottom:60px}
+.gal-glava h2{font-size:clamp(56px,6.6vw,110px);margin-top:24px}
+.gal-glava h2 em{color:var(--sampanjec)}
+.mreza{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(90px,9vw,140px);gap:clamp(12px,1.4vw,20px)}
+.mreza figure{margin:0;overflow:hidden;position:relative;background:var(--noc2)}
+.mreza img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--expo)}
+.mreza figure:hover img{transform:scale(1.07)}
+.mreza figcaption{position:absolute;left:16px;bottom:12px;font-family:var(--serif);font-style:italic;font-size:17px;color:#fff;opacity:0;transform:translateY(8px);transition:opacity .5s,transform .7s var(--expo);text-shadow:0 1px 14px rgba(0,0,0,.5)}
+.mreza figure:hover figcaption{opacity:1;transform:none}
+.g1{grid-column:1/6;grid-row:span 4}.g2{grid-column:6/9;grid-row:span 3}.g3{grid-column:9/13;grid-row:span 4}.g4{grid-column:6/9;grid-row:span 3}.g5{grid-column:1/4;grid-row:span 3}.g6{grid-column:4/6;grid-row:span 2}.g7{grid-column:9/13;grid-row:span 2}.g8{grid-column:4/6;grid-row:span 1}
+@media(max-width:900px){.mreza{grid-template-columns:1fr 1fr;grid-auto-rows:auto}.mreza figure{grid-column:auto!important;grid-row:auto!important;aspect-ratio:4/5}.mreza figure:nth-child(3n+1){grid-column:1/3!important;aspect-ratio:1}.mreza figcaption{opacity:1;transform:none}}
 
-/* zakljucek */
-.konec{display:grid;grid-template-columns:1fr 1fr;min-height:80svh;background:var(--kamen)}
-.konec figure{margin:0;overflow:hidden}
-.konec figure img{width:100%;height:100%;object-fit:cover}
-.konec .t{display:flex;flex-direction:column;justify-content:center;padding:clamp(50px,7vw,110px)}
-.konec h2{font-size:clamp(50px,5.6vw,92px);margin:26px 0 30px}
-.konec h2 em{color:var(--glina)}
-.konec p{color:var(--siva);max-width:40ch;margin-bottom:44px}
-.konec .gumbi{display:flex;flex-wrap:wrap;gap:30px}
-@media(max-width:900px){.konec{grid-template-columns:1fr}.konec figure{aspect-ratio:1}}
+.konec{position:relative;height:min(100svh,900px);overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center}
+.konec>img{position:absolute;inset:0;width:100%;height:120%;object-fit:cover}
+.konec::after{content:"";position:absolute;inset:0;background:rgba(15,12,10,.62)}
+.konec .t{position:relative;z-index:2;padding:0 22px}
+.konec h2{font-size:clamp(58px,7.4vw,128px);margin:26px auto 30px;max-width:13ch}
+.konec h2 em{color:var(--sampanjec)}
+.konec p{max-width:44ch;margin:0 auto 46px;color:#D9CCBC}
+.konec .akcije{justify-content:center}
 
-footer{background:var(--oglje);color:#A99D92;padding:90px 0 120px;font-size:13.5px}
-.ft{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;align-items:start}
-.ft .znak{text-align:left;color:#F4F0EA;display:inline-block}
-.ft p{margin-top:20px;max-width:32ch}
-.ft strong{display:block;font-weight:400;color:#F4F0EA;font-size:11px;letter-spacing:.26em;text-transform:uppercase;margin-bottom:16px}
-.ft a{display:block;text-decoration:none;margin-bottom:8px}
-.ft a:hover{color:#fff}
-.ft-sp{margin-top:70px;padding-top:24px;border-top:1px solid rgba(233,226,216,.14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px}
+footer{background:#0C0A08;color:#9C8E7F;padding:90px 0 120px;font-size:14px}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+.ft .znak{text-align:left;display:inline-block}
+.ft p{margin-top:22px;max-width:32ch}
+.ft strong{display:block;font-weight:400;color:var(--sampanjec);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:16px}
+.ft a{display:block;text-decoration:none;margin-bottom:8px;transition:color .3s}
+.ft a:hover{color:var(--slon)}
+.ft-sp{margin-top:70px;padding-top:24px;border-top:1px solid var(--crta-t);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px}
 @media(max-width:800px){.ft{grid-template-columns:1fr}}
 
-.mob{position:fixed;left:14px;right:14px;bottom:max(14px,env(safe-area-inset-bottom));z-index:35;display:none;transition:opacity .4s,transform .4s var(--ease)}
-.mob a{display:flex;align-items:center;justify-content:center;height:56px;background:var(--oglje);color:var(--papir);text-decoration:none;font-size:11.5px;letter-spacing:.26em;text-transform:uppercase}
-@media(max-width:760px){.mob{display:block}.mob.skrit{opacity:0;transform:translateY(20px);pointer-events:none}}
+.mob{position:fixed;left:14px;right:14px;bottom:max(14px,env(safe-area-inset-bottom));z-index:55;display:none;transition:opacity .4s,transform .6s var(--expo)}
+.mob .gumb{width:100%;height:56px}
+@media(max-width:760px){.mob{display:block}.mob.skrit{opacity:0;transform:translateY(24px);pointer-events:none}}
 
-/* povecava */
-.uvod-f,.kol-velika,.kol-g figure .okvir,.meri-f figure,.mat-f figure,.trak .okvir,.konec figure{cursor:zoom-in}
-.lb{position:fixed;inset:0;z-index:100;background:rgba(244,240,234,.97);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .45s}
+.kazalec{position:fixed;left:0;top:0;z-index:150;width:92px;height:92px;margin:-46px 0 0 -46px;border-radius:50%;background:var(--sampanjec);color:var(--noc);display:grid;place-items:center;font-size:10px;letter-spacing:.24em;text-transform:uppercase;pointer-events:none;transform:scale(0);transition:transform .5s var(--expo)}
+.kazalec.on{transform:scale(1)}
+@media(hover:none){.kazalec{display:none}}
+
+.lb{position:fixed;inset:0;z-index:180;background:rgba(12,10,8,.96);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .5s}
 .lb.on{opacity:1;pointer-events:auto}
-.lb img{max-width:88vw;max-height:82vh;object-fit:contain}
-.lb p{position:absolute;left:0;right:0;bottom:max(22px,env(safe-area-inset-bottom));text-align:center;font-family:var(--serif);font-style:italic;font-size:20px;color:var(--siva);padding:0 80px}
-.lb button{position:absolute;background:none;border:0;cursor:pointer;color:var(--oglje);font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;padding:14px}
+.lb img{max-width:88vw;max-height:82vh;object-fit:contain;transform:scale(.96);transition:transform .8s var(--expo)}
+.lb.on img{transform:none}
+.lb p{position:absolute;left:0;right:0;bottom:max(22px,env(safe-area-inset-bottom));text-align:center;font-family:var(--serif);font-style:italic;font-size:20px;color:var(--siva-t);padding:0 80px}
+.lb button{position:absolute;background:none;border:0;cursor:pointer;color:var(--slon);font-size:11px;letter-spacing:.28em;text-transform:uppercase;padding:14px;font-family:var(--sans)}
+.lb button:hover{color:var(--sampanjec)}
 .lb .x{top:16px;right:16px}.lb .l{left:10px;top:50%;transform:translateY(-50%)}.lb .d{right:10px;top:50%;transform:translateY(-50%)}
 @media(max-width:600px){.lb .l,.lb .d{top:auto;bottom:58px;transform:none}.lb img{max-height:70vh}}
-
-.zav{opacity:0;transform:translateY(34px);transition:opacity 1.3s var(--ease),transform 1.3s var(--ease)}
-.zav.on{opacity:1;transform:none}
-.zav.d1{transition-delay:.12s}.zav.d2{transition-delay:.24s}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.zav{opacity:1!important;transform:none!important}}
+[data-pov]{cursor:zoom-in}
+@media(hover:hover){[data-pov]{cursor:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 
-<div class="predogled">Predogled · brezplačen osnutek spletne strani, pripravil Spletni Atelje</div>
+<div class="predogled"><b>Predogled</b> · brezplačen osnutek spletne strani, pripravil Spletni Atelje</div>
 
 <header id="glava">
   <div class="w hd">
-    <nav><a href="#pure-form">Pure Form</a><a href="#flow">Flow</a><a href="#predmeti">Predmeti</a><a href="#po-meri">Po meri</a></nav>
+    <nav><a href="#kolekciji">Kolekciji</a><a href="#predmeti">Predmeti</a><a href="#po-meri">Po meri</a><a href="#material">Material</a></nav>
     <a class="znak" href="#"><small>STUDIO</small><b>ADÉLE</b></a>
-    <div class="desno"><a href="#po-meri">Naroči</a></div>
+    <div class="desno"><a class="gumb" href="#po-meri"><span>Naroči</span></a></div>
   </div>
 </header>
 
 <section class="uvod">
   <div class="uvod-t">
-    <div>
-      <div class="nad zav">Ročno ulito v Mariboru</div>
-      <h1 class="zav d1">Kosi, ki <em>umirijo</em> prostor.</h1>
-      <p class="opis zav d2">Pladnji, posodice, lončki in vaze iz jesmonita. Ulijemo jih ročno, enega za drugim, v barvah, ki jih izbereš sam.</p>
-      <a class="povezava zav d2" href="#pure-form">Odkrij kolekciji <svg viewBox="0 0 22 10" fill="none" stroke="currentColor"><path d="M0 5h21M17 1l4 4-4 4"/></svg></a>
-    </div>
-    <div class="uvod-spodaj zav">
-      <span><b>Pure Form &amp; Flow</b>dve kolekciji</span>
-      <span><b>Po meri</b>v poljubni barvi</span>
-    </div>
+    <div class="nad an-up">Ročno ulito v Mariboru</div>
+    <h1><span class="vr"><span>Kosi, ki</span></span><span class="vr"><span><em>umirijo</em></span></span><span class="vr"><span>prostor.</span></span></h1>
+    <p class="opis an-up">Pladnji, posodice, lončki in vaze iz jesmonita. Vsakega ulijemo ročno, posebej zate, v odtenkih, ki jih izbereš sam.</p>
+    <div class="akcije an-up"><a class="gumb" href="#po-meri"><span>Sestavi svoj set</span></a><a class="povezava" href="#kolekciji">Kolekciji <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></a></div>
   </div>
-  <figure class="uvod-f" style="margin:0"><img src="img/skrinjica.jpg" alt="Posodica s pokrovom na ovalnem pladnju, kolekcija Flow v odtenkih kave"><figcaption>Posodica s pokrovom, Flow</figcaption></figure>
+  <figure class="uvod-f">
+    <div class="glavna" data-pov><img class="par" src="img/skrinjica.jpg" alt="Posodica s kupolo na ovalnem pladnju, kolekcija Flow v odtenkih kave"></div>
+    <div class="mala" data-pov><img src="img/modri-1.jpg" alt="Visok lonček v dveh odtenkih modre"></div>
+    <figcaption>Posodica s kupolo, Flow</figcaption>
+  </figure>
+  <div class="drsnik"><i></i>Drsi</div>
 </section>
 
-<section class="izjava">
+<section class="izjava svetla">
   <div class="w">
-    <div class="nad zav">Studio Adéle</div>
-    <p class="zav d1">Preprosti predmeti za vsakdan <span class="mini"><img src="img/bele-posodice.jpg" alt=""></span> iz materiala, ki spominja na kamen, a je <em>lahek, gladek</em> in prijazen okolju.</p>
+    <div class="nad">Atelje</div>
+    <p id="izjava">Preprosti predmeti za vsakdan <span class="mini"><img src="img/bele-posodice.jpg" alt=""></span> iz materiala, ki je videti kot kamen, v roki pa je <em>lahek, gladek</em> in prijazen okolju. Nobena dva nista enaka.</p>
   </div>
 </section>
 
-<section class="kol" id="pure-form">
-  <div class="kol-velika zav"><img src="img/bel-set.jpg" alt="Bel set Pure Form: vaza, posodice in pladenj na zrcalu">
-    <div class="napis"><div class="nad">Kolekcija</div><h2>Pure Form</h2></div>
-  </div>
-  <div class="w kol-g">
-    <figure class="a zav"><div class="okvir"><img src="img/roza-1.jpg" alt="Rebrasta posodica z rožnatim robom"></div><figcaption><b>Rebrasta posodica</b><span>rožnat rob</span></figcaption></figure>
-    <div class="besedilo zav d1">
-      <h3>Ena barva, čiste linije, <em>tih značaj.</em></h3>
-      <p>Rebrasta površina, ki lovi svetlobo, in en sam odtenek po izbiri. Za tiste, ki imajo radi mir in klasiko, ali pa nežno roza, ko je prav to tisto, kar prostor potrebuje.</p>
-      <a class="povezava" href="#po-meri">Izberi odtenek <svg viewBox="0 0 22 10" fill="none" stroke="currentColor"><path d="M0 5h21M17 1l4 4-4 4"/></svg></a>
+<section class="kolekciji" id="kolekciji">
+  <div class="w">
+    <div class="kol-glava">
+      <div><div class="nad an-up">Kolekciji</div><h2 class="an-up">Dva značaja, <em>en material.</em></h2></div>
+      <p class="an-up">Kose iz obeh kolekcij lahko poljubno združiš v en set. Pure Form za mir, Flow za igro barv.</p>
     </div>
-    <figure class="b zav d2"><div class="okvir"><img src="img/bele-posodice.jpg" alt="Bele rebraste posodice Pure Form"></div><figcaption><b>Posodici</b><span>bela</span></figcaption></figure>
-  </div>
-</section>
-
-<section class="kol kamen" id="flow">
-  <div class="kol-velika zav"><img src="img/rumen-set.jpg" alt="Flow set v sončno rumeni: vazi in posodica na pladnju">
-    <div class="napis"><div class="nad">Kolekcija</div><h2><em>Flow</em></h2></div>
-  </div>
-  <div class="w kol-g zrcalo">
-    <figure class="a zav"><div class="okvir"><img src="img/modri-1.jpg" alt="Visok lonček v dveh odtenkih modre"></div><figcaption><b>Visok lonček</b><span>dve modri na beli</span></figcaption></figure>
-    <div class="besedilo zav d1">
-      <h3>Barve, ki se prelijejo <em>vsakič drugače.</em></h3>
-      <p>Odtenki se med ulivanjem prelivajo kot v marmorju, zato ni dveh enakih kosov. Od kave in peska do sončnega zahoda, ali katerakoli kombinacija, ki si jo zamisliš.</p>
-      <a class="povezava" href="#po-meri">Sestavi kombinacijo <svg viewBox="0 0 22 10" fill="none" stroke="currentColor"><path d="M0 5h21M17 1l4 4-4 4"/></svg></a>
+    <div class="panela">
+      <a class="panel an-clip" href="#po-meri"><img src="img/bel-set.jpg" alt="Bel set Pure Form na zrcalu">
+        <div class="vzorec"><i style="background:#F3F0EA"></i><i style="background:#E4B2B8"></i><i style="background:#DCCBB6"></i></div>
+        <div class="vsebina"><div class="nad">Ena barva</div><h3>Pure Form</h3><p>Rebrasta površina, ki lovi svetlobo, in en sam odtenek po izbiri. Mirno, klasično, brezčasno.</p><span class="povezava">Izberi odtenek <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></span></div>
+      </a>
+      <a class="panel an-clip" href="#po-meri"><img src="img/rumen-set.jpg" alt="Flow set v sončno rumeni">
+        <div class="vzorec"><i style="background:#EBC85A"></i><i style="background:#6A95C4"></i><i style="background:#8E5E4B"></i></div>
+        <div class="vsebina"><div class="nad">Prelivanje barv</div><h3><em>Flow</em></h3><p>Odtenki se med ulivanjem prelijejo kot marmor, zato je vsak kos edinstven. Od kave do sončnega zahoda.</p><span class="povezava">Sestavi kombinacijo <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></span></div>
+      </a>
     </div>
-    <figure class="b zav d2"><div class="okvir"><img src="img/sunset.jpg" alt="Posodica Flow v barvah sončnega zahoda"></div><figcaption><b>Posodica</b><span>sončni zahod</span></figcaption></figure>
+    <div class="trak-kol">
+      <figure class="an-up"><div class="okvir" data-pov><img src="img/roza-1.jpg" alt="Rebrasta posodica z rožnatim robom"></div><figcaption><b>Posodica</b><span>Pure Form, roza</span></figcaption></figure>
+      <figure class="an-up"><div class="okvir" data-pov><img src="img/sunset.jpg" alt="Posodica v barvah sončnega zahoda"></div><figcaption><b>Posodica</b><span>Flow, sončni zahod</span></figcaption></figure>
+      <figure class="an-up"><div class="okvir" data-pov><img src="img/bele-posodice.jpg" alt="Bele rebraste posodice"></div><figcaption><b>Posodici</b><span>Pure Form, bela</span></figcaption></figure>
+      <figure class="an-up"><div class="okvir" data-pov><img src="img/modri-3.jpg" alt="Modri lonček s pokrovom"></div><figcaption><b>Lonček</b><span>Flow, modra</span></figcaption></figure>
+    </div>
   </div>
 </section>
 
 <section class="predmeti" id="predmeti">
-  <div class="w">
-    <div class="pred-top">
-      <h2 class="zav">Predmeti</h2>
-      <p class="zav d1">Vsak predmet je na voljo v obeh kolekcijah in ga lahko kombiniraš v set. Za kopalnico, pisalno mizo, polico ali kot darilo.</p>
+  <div class="pr-ovoj" id="prOvoj">
+    <div class="w pr-glava">
+      <div><div class="nad">Predmeti</div><h2>Za kopalnico, mizo <em>in polico.</em></h2></div>
+      <p>Vsak predmet je na voljo v obeh kolekcijah. Ob nakupu treh ali več obračunamo popust.</p>
     </div>
-    <ul class="seznam" id="seznam">
-      <li class="zav" data-img="img/rjav-set.jpg"><div class="sl"><img src="img/rjav-set.jpg" alt="Pladnja"></div><h3>Pladenj</h3><p>Okrogel ali ovalni. Podlaga za set, nakit, sveče ali drobnarije.</p><span class="kol-ime">Pure Form · Flow</span></li>
-      <li class="zav" data-img="img/rumena-posodica.jpg"><div class="sl"><img src="img/rumena-posodica.jpg" alt="Posodica s pokrovom"></div><h3>Posodica s pokrovom</h3><p>Za drobne stvari, ki jih želiš imeti pri roki, a ne na očeh.</p><span class="kol-ime">Pure Form · Flow</span></li>
-      <li class="zav" data-img="img/modri-2.jpg"><div class="sl"><img src="img/modri-2.jpg" alt="Visok lonček"></div><h3>Visok lonček</h3><p>Za čopiče, zobne ščetke ali pisala. Po želji z ujemajočim pokrovom.</p><span class="kol-ime">Pure Form · Flow</span></li>
-      <li class="zav" data-img="img/skrinjica-2.jpg"><div class="sl"><img src="img/skrinjica-2.jpg" alt="Posodica s pokrovom v obliki kupole"></div><h3>Posodica s kupolo</h3><p>Rebrasta, s pokrovom v obliki kupole. Lepa sama ali v setu.</p><span class="kol-ime">Pure Form · Flow</span></li>
-      <li class="zav" data-img="img/dozirnik-visok.jpg"><div class="sl"><img src="img/dozirnik-visok.jpg" alt="Dozirnik"></div><h3>Dozirnik</h3><p>Za milo, losjon ali olje. Črna, zlata ali srebrna pumpica.</p><span class="kol-ime">Pure Form · Flow</span></li>
-      <li class="zav" data-img="img/vaza.jpg"><div class="sl"><img src="img/vaza.jpg" alt="Vaza"></div><h3>Vaza</h3><p>Za suho cvetje ali kot samostojen kos na polici.</p><span class="kol-ime">Pure Form · Flow</span></li>
-    </ul>
-    <div class="pred-op zav"><span><b>Ob nakupu treh ali več predmetov</b> obračunamo popust.</span><span>Cenik pošljemo na povpraševanje.</span></div>
+    <div class="pr-trak" id="prTrak">
+      <article class="kos"><div class="okvir" data-pov><img src="img/rjav-set.jpg" alt="Okrogel in ovalni pladenj s posodico"></div><h3>Pladenj</h3><p>Okrogel ali ovalni. Podlaga za set, nakit, sveče ali drobnarije.</p></article>
+      <article class="kos"><div class="okvir" data-pov><img src="img/rumena-posodica.jpg" alt="Posodica s pokrovom"></div><h3>Posodica s pokrovom</h3><p>Za drobne stvari, ki jih želiš imeti pri roki, a ne na očeh.</p></article>
+      <article class="kos"><div class="okvir" data-pov><img src="img/modri-2.jpg" alt="Visok lonček s pokrovom"></div><h3>Visok lonček</h3><p>Za čopiče, zobne ščetke ali pisala. Po želji z ujemajočim pokrovom.</p></article>
+      <article class="kos"><div class="okvir" data-pov><img src="img/skrinjica-2.jpg" alt="Posodica s kupolo"></div><h3>Posodica s kupolo</h3><p>Rebrasta, s pokrovom v obliki kupole. Lepa sama ali v setu.</p></article>
+      <article class="kos"><div class="okvir" data-pov><img src="img/dozirnik-visok.jpg" alt="Dozirnik s črno pumpico"></div><h3>Dozirnik</h3><p>Za milo, losjon ali olje. Črna, zlata ali srebrna pumpica.</p></article>
+      <article class="kos"><div class="okvir" data-pov><img src="img/vaza.jpg" alt="Vaza v kavni kombinaciji"></div><h3>Vaza</h3><p>Za suho cvetje ali kot samostojen kos na polici.</p></article>
+      <article class="kos konec"><p>Cenik pošljemo na povpraševanje, skupaj s predlogom za tvoj set.</p><a class="povezava" href="#po-meri">Sestavi set <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></a></article>
+    </div>
+    <div class="pr-napredek"><i id="prNap"></i></div>
   </div>
 </section>
-<div class="lebdeca" id="lebdeca"><img alt=""></div>
 
 <section class="meri" id="po-meri">
   <div class="w meri-g">
     <div>
-      <div class="nad zav">Naročila po meri</div>
-      <h2 class="zav d1">Ti prineseš idejo, <em>mi jo ulijemo.</em></h2>
-      <p class="citat zav d2">»Ne gre več le za kolekcije. Gre za ustvarjanje kosa, ki si ga zamisliš ti.«</p>
-      <p class="uvodnik zav">Rojstni dan v zlati in črni, set v barvah kopalnice ali darilo, ki se ujema s stanovanjem prijateljice. Izberi predmete in odtenke, mi pa ti pošljemo predlog in ceno.</p>
-      <div class="meri-f zav">
-        <figure class="p"><img src="img/lonec-pladenj.jpg" alt="Visok lonček na ovalnem pladnju"></figure>
-        <figure class="q"><img src="img/roza-2.jpg" alt="Rožnat set posodic"></figure>
+      <div class="nad an-up">Naročila po meri</div>
+      <h2 class="an-up">Ti prineseš idejo, <em>mi jo ulijemo.</em></h2>
+      <p class="citat an-up">»Ne gre več le za kolekcije. Gre za ustvarjanje kosa, ki si ga zamisliš ti.«</p>
+      <p class="uvodnik an-up">Rojstni dan v zlati in črni, set v barvah kopalnice ali darilo, ki se ujema s stanovanjem prijateljice. Izberi predmete in odtenke, mi pa ti pošljemo predlog in ceno.</p>
+      <div class="meri-f">
+        <figure class="p an-clip" data-pov><img src="img/lonec-pladenj.jpg" alt="Visok lonček na ovalnem pladnju"></figure>
+        <figure class="q an-clip" data-pov><img src="img/roza-2.jpg" alt="Rožnat set posodic"></figure>
       </div>
     </div>
-    <form class="obrazec zav d1" id="obrazec" novalidate>
-      <div class="vrsta"><span class="nad">Predmeti</span>
+    <form class="obrazec an-up" id="obrazec" novalidate>
+      <h3>Sestavi svoj set</h3>
+      <p class="pod">Neobvezno povpraševanje. Odgovorimo s predlogom in ceno.</p>
+      <div class="vrsta"><span class="oznaka">Predmeti</span>
         <div class="izbire" id="izbPred">
           <button type="button" data-v="pladenj">Pladenj</button>
           <button type="button" data-v="posodica s pokrovom">Posodica s pokrovom</button>
@@ -336,14 +345,14 @@ footer{background:var(--oglje);color:#A99D92;padding:90px 0 120px;font-size:13.5
           <button type="button" data-v="vaza">Vaza</button>
         </div>
       </div>
-      <div class="vrsta"><span class="nad">Kolekcija</span>
+      <div class="vrsta"><span class="oznaka">Kolekcija</span>
         <div class="izbire" id="izbKol">
           <button type="button" data-v="Pure Form" aria-pressed="true">Pure Form</button>
           <button type="button" data-v="Flow">Flow</button>
           <button type="button" data-v="kombinacija obeh">Kombinacija obeh</button>
         </div>
       </div>
-      <div class="vrsta"><span class="nad">Odtenki</span>
+      <div class="vrsta"><span class="oznaka">Odtenki</span>
         <div class="odtenki" id="izbBar">
           <button type="button" data-v="bela"><i style="background:#F3F0EA"></i>bela</button>
           <button type="button" data-v="pesek"><i style="background:#DCCBB6"></i>pesek</button>
@@ -353,67 +362,61 @@ footer{background:var(--oglje);color:#A99D92;padding:90px 0 120px;font-size:13.5
           <button type="button" data-v="modra"><i style="background:#6A95C4"></i>modra</button>
           <button type="button" data-v="oliva"><i style="background:#8C8A55"></i>oliva</button>
           <button type="button" data-v="zlata"><i style="background:linear-gradient(140deg,#A7822F,#E6CD86 55%,#B48E3A)"></i>zlata</button>
-          <button type="button" data-v="črna"><i style="background:#23201D"></i>črna</button>
+          <button type="button" data-v="črna"><i style="background:#15110E"></i>črna</button>
         </div>
       </div>
-      <div class="vrsta"><span class="nad">Ideja ali priložnost</span><textarea id="ideja" rows="1" placeholder="Darilo za rojstni dan …"></textarea></div>
-      <div class="vrsta"><span class="nad">Ime in kontakt</span><input id="kontakt" placeholder="Ime, e-pošta ali telefon"></div>
+      <div class="vrsta"><span class="oznaka">Ideja ali priložnost</span><textarea id="ideja" rows="1" placeholder="Darilo za rojstni dan …"></textarea></div>
+      <div class="vrsta"><span class="oznaka">Ime in kontakt</span><input id="kontakt" placeholder="Ime, e-pošta ali telefon"></div>
       <div class="povzetek" id="povzetek"></div>
-      <button class="poslji" type="submit">Pošlji povpraševanje</button>
+      <button class="gumb" type="submit"><span>Pošlji povpraševanje</span></button>
       <div class="odziv" id="odziv"></div>
     </form>
   </div>
 </section>
 
-<section class="material" id="material">
+<section class="material svetla" id="material">
   <div class="w mat-g">
     <div>
-      <div class="nad zav">Material</div>
-      <h2 class="zav d1">Jesmonite.</h2>
-      <p class="uvodnik zav d2">Sodoben material iz naravnih mineralov in akrilne osnove na vodni osnovi. Na videz kot kamen ali beton, v roki lažji in gladkejši.</p>
+      <div class="nad an-up">Material</div>
+      <h2 class="an-up">Jesmonite<em>.</em></h2>
+      <p class="uvodnik an-up">Sodoben material iz naravnih mineralov in akrilne osnove na vodni osnovi. Na videz kot kamen ali beton, v roki lažji in gladkejši.</p>
       <dl>
-        <div class="zav"><dt>Netoksičen</dt><dd>Brez smole, topil in neprijetnih vonjav, primeren za zaprte prostore.</dd></div>
-        <div class="zav"><dt>Vzdržljiv</dt><dd>Močan in lahek, hkrati nekoliko prožen, zato odličen za drobne detajle.</dd></div>
-        <div class="zav"><dt>Prijazen okolju</dt><dd>Prijaznejša alternativa betonu in epoksi smoli.</dd></div>
-        <div class="zav"><dt>Nega</dt><dd>Ni povsem vodoodporen, zato kose za stik z vodo, kot so dozirniki, dodatno zaščitimo.</dd></div>
+        <div class="an-up"><dt>Netoksičen</dt><dd>Brez smole, topil in neprijetnih vonjav, primeren za zaprte prostore.</dd></div>
+        <div class="an-up"><dt>Vzdržljiv</dt><dd>Močan in lahek, hkrati nekoliko prožen, zato odličen za drobne detajle.</dd></div>
+        <div class="an-up"><dt>Prijazen okolju</dt><dd>Prijaznejša alternativa betonu in epoksi smoli.</dd></div>
+        <div class="an-up"><dt>Nega</dt><dd>Ni povsem vodoodporen, zato kose za stik z vodo, kot so dozirniki, dodatno zaščitimo.</dd></div>
       </dl>
     </div>
-    <div class="mat-f zav d1">
-      <figure class="x"><img src="img/okrogel-pladenj.jpg" alt="Okrogel pladenj z marmornim vzorcem"></figure>
-      <figure class="y"><img src="img/olivni-pladenj.jpg" alt="Ovalni pladenj v olivni in beli"></figure>
-    </div>
+    <figure class="mat-f an-clip" data-pov><img class="par" src="img/okrogel-pladenj.jpg" alt="Okrogel pladenj z marmornim vzorcem"></figure>
   </div>
 </section>
 
 <section class="galerija">
-  <div class="w gal-top">
-    <div><div class="nad zav">Iz ateljeja</div><h2 class="zav d1">Kosi, ki so <em>našli dom.</em></h2></div>
-    <div class="gal-gumbi zav"><button type="button" id="galL" aria-label="Nazaj"><svg viewBox="0 0 22 10" fill="none" stroke="currentColor"><path d="M22 5H1M5 1 1 5l4 4"/></svg></button><button type="button" id="galD" aria-label="Naprej"><svg viewBox="0 0 22 10" fill="none" stroke="currentColor"><path d="M0 5h21M17 1l4 4-4 4"/></svg></button></div>
-  </div>
-  <div class="trak" id="trak">
-    <figure><div class="okvir"><img src="img/rumena-vaza.jpg" alt="Vaza Flow v sončno rumeni"></div><figcaption>Vaza, sončna</figcaption></figure>
-    <figure><div class="okvir"><img src="img/roza-3.jpg" alt="Set Pure Form z rožnatimi robovi"></div><figcaption>Set, roza</figcaption></figure>
-    <figure><div class="okvir"><img src="img/dozirnik-kvadrat.jpg" alt="Kvadratni dozirnik s črno pumpico"></div><figcaption>Dozirnik, kava</figcaption></figure>
-    <figure><div class="okvir"><img src="img/modri-3.jpg" alt="Modri lonček s pokrovom"></div><figcaption>Lonček s pokrovom, modra</figcaption></figure>
-    <figure><div class="okvir"><img src="img/rjava-posodica.jpg" alt="Posodica s pokrovom v kavni kombinaciji"></div><figcaption>Posodica, kava</figcaption></figure>
-    <figure><div class="okvir"><img src="img/rumen-pladenj.jpg" alt="Marmoriran pladenj v rumeni"></div><figcaption>Pladenj, sončna</figcaption></figure>
-    <figure><div class="okvir"><img src="img/siv-lonec.jpg" alt="Lonček s pokrovom"></div><figcaption>Lonček s pokrovom</figcaption></figure>
-    <figure><div class="okvir"><img src="img/bel-set-2.jpg" alt="Bel set na pladnju"></div><figcaption>Set, bela</figcaption></figure>
-    <figure><div class="okvir"><img src="img/ovalni-rjav.jpg" alt="Ovalni pladenj Flow"></div><figcaption>Ovalni pladenj, kava</figcaption></figure>
-    <figure><div class="okvir"><img src="img/rumen-set-2.jpg" alt="Set Flow v rumeni"></div><figcaption>Set, sončna</figcaption></figure>
+  <div class="w">
+    <div class="gal-glava">
+      <div><div class="nad an-up">Iz ateljeja</div><h2 class="an-up">Kosi, ki so <em>našli dom.</em></h2></div>
+      <a class="povezava an-up" href="https://www.instagram.com/the.adele.studio/" target="_blank" rel="noopener" style="color:var(--sampanjec)">@the.adele.studio <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></a>
+    </div>
+    <div class="mreza">
+      <figure class="g1 an-clip" data-pov><img src="img/rumena-vaza.jpg" alt="Vaza v sončno rumeni"><figcaption>Vaza, sončna</figcaption></figure>
+      <figure class="g2 an-clip" data-pov><img src="img/roza-3.jpg" alt="Set z rožnatimi robovi"><figcaption>Set, roza</figcaption></figure>
+      <figure class="g3 an-clip" data-pov><img src="img/dozirnik-kvadrat.jpg" alt="Kvadratni dozirnik"><figcaption>Dozirnik, kava</figcaption></figure>
+      <figure class="g4 an-clip" data-pov><img src="img/rjava-posodica.jpg" alt="Posodica v kavni kombinaciji"><figcaption>Posodica, kava</figcaption></figure>
+      <figure class="g5 an-clip" data-pov><img src="img/rumen-pladenj.jpg" alt="Marmoriran pladenj v rumeni"><figcaption>Pladenj, sončna</figcaption></figure>
+      <figure class="g6 an-clip" data-pov><img src="img/siv-lonec.jpg" alt="Lonček s pokrovom"><figcaption>Lonček</figcaption></figure>
+      <figure class="g7 an-clip" data-pov><img src="img/olivni-pladenj.jpg" alt="Ovalni pladenj v olivni"><figcaption>Pladenj, oliva</figcaption></figure>
+      <figure class="g8 an-clip" data-pov><img src="img/bel-set-2.jpg" alt="Bel set na pladnju"><figcaption>Set, bela</figcaption></figure>
+    </div>
   </div>
 </section>
 
 <section class="konec">
-  <figure class="zav"><img src="img/paket.jpg" alt="Paket Studio Adéle z nalepko za zahvalo"></figure>
+  <img class="par" src="img/rumen-set-2.jpg" alt="">
   <div class="t">
-    <div class="nad zav">Za dom ali za darilo</div>
-    <h2 class="zav d1">Povej nam odtenke, <em>ostalo ulijemo mi.</em></h2>
-    <p class="zav d2">Vsak kos je ulit ročno in skrbno zapakiran. Pošlji povpraševanje ali nam piši na Instagram.</p>
-    <div class="gumbi zav d2">
-      <a class="povezava" href="#po-meri">Sestavi set <svg viewBox="0 0 22 10" fill="none" stroke="currentColor"><path d="M0 5h21M17 1l4 4-4 4"/></svg></a>
-      <a class="povezava" href="https://ig.me/m/the.adele.studio" target="_blank" rel="noopener">Piši na Instagram <svg viewBox="0 0 22 10" fill="none" stroke="currentColor"><path d="M0 5h21M17 1l4 4-4 4"/></svg></a>
-    </div>
+    <div class="nad an-up">Za dom ali za darilo</div>
+    <h2 class="an-up">Povej nam odtenke, <em>ostalo ulijemo mi.</em></h2>
+    <p class="an-up">Vsak kos je ulit ročno in skrbno zapakiran. Pošlji povpraševanje ali nam piši na Instagram.</p>
+    <div class="akcije an-up"><a class="gumb" href="#po-meri"><span>Sestavi svoj set</span></a><a class="povezava" href="https://ig.me/m/the.adele.studio" target="_blank" rel="noopener">Piši na Instagram <svg viewBox="0 0 26 10" fill="none" stroke="currentColor"><path d="M0 5h25M21 1l4 4-4 4"/></svg></a></div>
   </div>
 </section>
 
@@ -422,45 +425,66 @@ footer{background:var(--oglje);color:#A99D92;padding:90px 0 120px;font-size:13.5
     <div class="ft">
       <div><a class="znak" href="#"><small>STUDIO</small><b>ADÉLE</b></a><p>Ročno uliti kosi iz jesmonita. Naročila po meri dobrodošla.</p></div>
       <div><strong>Atelje</strong><span>Maribor</span><a href="https://www.instagram.com/the.adele.studio/" target="_blank" rel="noopener" style="margin-top:8px">Instagram</a><a href="https://ig.me/m/the.adele.studio" target="_blank" rel="noopener">Pošlji sporočilo</a></div>
-      <div><strong>Na strani</strong><a href="#pure-form">Pure Form</a><a href="#flow">Flow</a><a href="#predmeti">Predmeti</a><a href="#po-meri">Po meri</a></div>
+      <div><strong>Na strani</strong><a href="#kolekciji">Kolekciji</a><a href="#predmeti">Predmeti</a><a href="#po-meri">Po meri</a><a href="#material">Material</a></div>
     </div>
     <div class="ft-sp"><span>© 2026 Studio Adéle</span><span>Predogled: Spletni Atelje</span></div>
   </div>
 </footer>
 
-<div class="mob" id="mob"><a href="#po-meri">Sestavi svoj set</a></div>
-
+<div class="mob" id="mob"><a class="gumb" href="#po-meri"><span>Sestavi svoj set</span></a></div>
+<div class="kazalec" id="kazalec">Poglej</div>
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Povečana fotografija"><button class="x" type="button">Zapri</button><button class="l" type="button">Nazaj</button><img alt=""><button class="d" type="button">Naprej</button><p></p></div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
 const $=id=>document.getElementById(id);
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{rootMargin:'0px 0px -6% 0px'});
-document.querySelectorAll('.zav').forEach(z=>io.observe(z));
+const gibanje=!matchMedia('(prefers-reduced-motion: reduce)').matches&&window.gsap&&window.ScrollTrigger;
+
 const glava=$('glava'),mob=$('mob'),meri=$('po-meri');
-function tick(){const y=scrollY,vh=innerHeight;glava.classList.toggle('on',y>20);const r=meri.getBoundingClientRect();mob.classList.toggle('skrit',y<vh*.7||(r.top<vh&&r.bottom>0));document.querySelectorAll('.zav:not(.on)').forEach(z=>{if(z.getBoundingClientRect().top<vh*.96)z.classList.add('on')})}
+function tick(){const y=scrollY,vh=innerHeight;glava.classList.toggle('on',y>30);const r=meri.getBoundingClientRect();mob.classList.toggle('skrit',y<vh*.7||(r.top<vh&&r.bottom>0))}
 addEventListener('scroll',tick,{passive:true});tick();
 
-// lebdeca slika ob seznamu predmetov
-const leb=$('lebdeca'),lebImg=leb.querySelector('img');
-if(matchMedia('(hover:hover) and (min-width:901px)').matches){
-  document.querySelectorAll('#seznam li').forEach(li=>{
-    li.addEventListener('mouseenter',()=>{lebImg.src=li.dataset.img;leb.classList.add('on')});
-    li.addEventListener('mouseleave',()=>leb.classList.remove('on'));
-    li.addEventListener('mousemove',e=>{leb.style.left=(e.clientX+170)+'px';leb.style.top=e.clientY+'px'});
-  });
+const iz=$('izjava');
+[...iz.childNodes].forEach(n=>{if(n.nodeType===3){const f=document.createDocumentFragment();n.textContent.split(/(\s+)/).forEach(t=>{if(!t.trim()){f.append(t);return}const s=document.createElement('span');s.className='beseda';s.textContent=t;f.append(s)});n.replaceWith(f)}else if(n.nodeType===1){n.classList.add('beseda')}});
+const besede=[...iz.querySelectorAll('.beseda')];
+function izjava(){const r=iz.getBoundingClientRect(),vh=innerHeight;const p=Math.min(1,Math.max(0,(vh*.85-r.top)/(r.height+vh*.35)));const n=Math.round(p*besede.length);besede.forEach((b,i)=>b.classList.toggle('on',i<n))}
+addEventListener('scroll',izjava,{passive:true});izjava();
+
+if(gibanje){
+  gsap.registerPlugin(ScrollTrigger);
+  const E='expo.out';
+  gsap.from('.uvod h1 .vr>span',{yPercent:110,duration:1.6,ease:E,stagger:.12,delay:.15});
+  gsap.from('.uvod .an-up',{y:30,opacity:0,duration:1.4,ease:E,stagger:.12,delay:.5});
+  gsap.from('.uvod-f .glavna',{clipPath:'inset(0 0 0 100%)',duration:1.8,ease:'expo.inOut'});
+  gsap.from('.uvod-f .mala',{y:80,opacity:0,duration:1.6,ease:E,delay:.9});
+  gsap.utils.toArray('.an-up').filter(e=>!e.closest('.uvod')).forEach(el=>gsap.from(el,{y:40,opacity:0,duration:1.4,ease:E,scrollTrigger:{trigger:el,start:'top 92%'}}));
+  gsap.utils.toArray('.an-clip').forEach(el=>{gsap.from(el,{clipPath:'inset(16% 0 0 0)',duration:1.6,ease:E,scrollTrigger:{trigger:el,start:'top 90%'}});const im=el.querySelector('img');if(im&&!im.classList.contains('par'))gsap.from(im,{scale:1.22,duration:2,ease:E,scrollTrigger:{trigger:el,start:'top 90%'}})});
+  gsap.utils.toArray('img.par').forEach(im=>gsap.fromTo(im,{yPercent:-8},{yPercent:4,ease:'none',scrollTrigger:{trigger:im.parentElement,start:'top bottom',end:'bottom top',scrub:true}}));
+  ScrollTrigger.matchMedia({'(min-width: 901px)':()=>{
+    const trak=$('prTrak');const dolzina=()=>Math.max(0,trak.scrollWidth-innerWidth);
+    gsap.to(trak,{x:()=>-dolzina(),ease:'none',scrollTrigger:{trigger:'#prOvoj',start:'top top',end:()=>'+='+dolzina(),pin:true,scrub:.8,invalidateOnRefresh:true,onUpdate:s=>gsap.set('#prNap',{scaleX:s.progress})}});
+  }});
+  addEventListener('load',()=>ScrollTrigger.refresh());
 }
 
-// obrazec
+const kz=$('kazalec');
+if(matchMedia('(hover:hover)').matches){
+  let tx=0,ty=0,x=0,y=0;addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY});
+  (function zanka(){x+=(tx-x)*.18;y+=(ty-y)*.18;kz.style.left=x+'px';kz.style.top=y+'px';requestAnimationFrame(zanka)})();
+  document.querySelectorAll('[data-pov]').forEach(el=>{el.addEventListener('mouseenter',()=>kz.classList.add('on'));el.addEventListener('mouseleave',()=>kz.classList.remove('on'))});
+}
+
 const pred=new Set(),bar=new Set();let kol='Pure Form';
-const preklopi=(el,v,on)=>el.querySelector(`[data-v="${v}"]`).setAttribute('aria-pressed',on);
+const nastavi=(el,v,on)=>el.querySelector(`[data-v="${v}"]`).setAttribute('aria-pressed',on);
 $('izbPred').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const v=b.dataset.v;pred.has(v)?pred.delete(v):pred.add(v);b.setAttribute('aria-pressed',pred.has(v));povz()});
-$('izbKol').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;kol=b.dataset.v;$('izbKol').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));if(kol==='Pure Form'&&bar.size>1){const p=[...bar][0];bar.forEach(v=>preklopi($('izbBar'),v,false));bar.clear();bar.add(p);preklopi($('izbBar'),p,true)}povz()});
-$('izbBar').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const v=b.dataset.v;if(bar.has(v))bar.delete(v);else{if(kol==='Pure Form'){bar.forEach(x=>preklopi($('izbBar'),x,false));bar.clear()}bar.add(v)}b.setAttribute('aria-pressed',bar.has(v));povz()});
+$('izbKol').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;kol=b.dataset.v;$('izbKol').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));if(kol==='Pure Form'&&bar.size>1){const p=[...bar][0];bar.forEach(v=>nastavi($('izbBar'),v,false));bar.clear();bar.add(p);nastavi($('izbBar'),p,true)}povz()});
+$('izbBar').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const v=b.dataset.v;if(bar.has(v))bar.delete(v);else{if(kol==='Pure Form'){bar.forEach(x=>nastavi($('izbBar'),x,false));bar.clear()}bar.add(v)}b.setAttribute('aria-pressed',bar.has(v));povz()});
 function povz(){const p=$('povzetek');
-  if(!pred.size){p.innerHTML='<span style="color:#B3A89E">Izberi predmete, kolekcijo in odtenke.</span>';return}
+  if(!pred.size){p.innerHTML='<span style="color:rgba(233,218,203,.5)">Izberi predmete, kolekcijo in odtenke.</span>';return}
   const s=[...pred];let t=s.length>1?s.slice(0,-1).join(', ')+' in '+s.at(-1):s[0];t=t.charAt(0).toUpperCase()+t.slice(1);
   let h=t+', <em>'+kol+'</em>'+(bar.size?', '+[...bar].join(' in '):'')+'.';
-  h+=pred.size>=3?'<small>Pri treh ali več predmetih obračunamo popust.</small>':'<small style="color:var(--siva)">Še '+(3-pred.size)+(3-pred.size===1?' predmet':' predmeta')+' do popusta.</small>';
+  h+=pred.size>=3?'<small>Pri treh ali več predmetih obračunamo popust.</small>':'<small style="color:#CDB3A1">Še '+(3-pred.size)+(3-pred.size===1?' predmet':' predmeta')+' do popusta.</small>';
   p.innerHTML=h}
 $('obrazec').addEventListener('submit',e=>{e.preventDefault();const k=$('kontakt').value.trim(),o=$('odziv');
   if(!pred.size){o.innerHTML='Izberi vsaj en predmet.';o.classList.add('on');return}
@@ -469,20 +493,10 @@ $('obrazec').addEventListener('submit',e=>{e.preventDefault();const k=$('kontakt
   o.innerHTML='Hvala, '+ime+'. Povpraševanje je prejeto, kmalu ti pošljemo predlog in ceno.<small>Predogled: na pravi strani povpraševanje prispe na e-pošto ateljeja.</small>';o.classList.add('on')});
 povz();
 
-// galerija: puscice in vlecenje
-const trak=$('trak');const korak=()=>trak.querySelector('figure').offsetWidth+18;
-$('galL').onclick=()=>trak.scrollBy({left:-korak(),behavior:'smooth'});$('galD').onclick=()=>trak.scrollBy({left:korak(),behavior:'smooth'});
-let vx=null,sx=0,premik=0;
-trak.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;vx=e.clientX;sx=trak.scrollLeft;premik=0;trak.classList.add('vlece')});
-addEventListener('pointermove',e=>{if(vx===null)return;premik=e.clientX-vx;trak.scrollLeft=sx-premik});
-addEventListener('pointerup',()=>{if(vx===null)return;vx=null;trak.classList.remove('vlece')});
-
-// povecava
 (()=>{const lb=$('lb'),li=lb.querySelector('img'),lp=lb.querySelector('p');
-const sl=[...document.querySelectorAll('.uvod-f img,.kol-velika img,.kol-g img,.seznam .sl img,.meri-f img,.mat-f img,.trak img,.konec img')];let i=0;
+const el=[...document.querySelectorAll('[data-pov]')];const sl=el.map(e=>e.querySelector('img')||e);let i=0;
 function pokazi(k){i=(k+sl.length)%sl.length;li.src=sl[i].src;li.alt=sl[i].alt;lp.textContent=sl[i].alt}
-function odpri(k){pokazi(k);lb.classList.add('on');document.body.style.overflow='hidden'}
-sl.forEach((s,k)=>{const c=s.closest('li')||s.closest('.okvir')||s.closest('figure')||s.closest('.kol-velika')||s;c.addEventListener('click',()=>{if(Math.abs(premik)>6&&s.closest('.trak')){premik=0;return}odpri(k)})});
+el.forEach((e,k)=>e.addEventListener('click',ev=>{ev.preventDefault();pokazi(k);lb.classList.add('on');kz.classList.remove('on');document.body.style.overflow='hidden'}));
 function zapri(){lb.classList.remove('on');document.body.style.overflow=''}
 lb.querySelector('.x').onclick=zapri;lb.querySelector('.l').onclick=e=>{e.stopPropagation();pokazi(i-1)};lb.querySelector('.d').onclick=e=>{e.stopPropagation();pokazi(i+1)};
 lb.addEventListener('click',e=>{if(e.target===lb)zapri()});
