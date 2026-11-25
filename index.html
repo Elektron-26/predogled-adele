@@ -237,6 +237,13 @@ footer{background:#0C0A08;color:#9C8E7F;padding:90px 0 120px;font-size:14px}
 [data-pov]{cursor:zoom-in}
 
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+/* polna slika v uvodu */
+.uvod{display:flex!important;align-items:flex-end;min-height:100svh!important}
+.uvod-f{position:absolute!important;inset:0;height:auto!important;order:0!important;margin:0}
+.uvod-t{max-width:860px;padding:210px clamp(22px,4.5vw,64px) clamp(60px,10vh,120px) max(clamp(22px,4.5vw,64px),calc((100vw - 1360px)/2 + 64px))!important}
+.uvod-f .glavna::after{content:""!important;background:linear-gradient(180deg,rgba(15,12,10,.62) 0%,rgba(15,12,10,0) 24%,rgba(15,12,10,.12) 50%,rgba(15,12,10,.86) 100%),linear-gradient(90deg,rgba(15,12,10,.62) 0%,rgba(15,12,10,0) 66%)!important}
+.uvod .opis{color:#E6DCCF}
+.uvod .nad{color:#E2C29D}
 </style>
 </head>
 <body>
@@ -441,7 +448,7 @@ if(gibanje){
   const E='expo.out';
   gsap.from('.uvod h1 .vr>span',{yPercent:110,duration:1.6,ease:E,stagger:.12,delay:.15});
   gsap.from('.uvod .an-up',{y:30,opacity:0,duration:1.4,ease:E,stagger:.12,delay:.5});
-  gsap.from('.uvod-f .glavna',{clipPath:'inset(0 0 0 100%)',duration:1.8,ease:'expo.inOut'});
+  gsap.from('.uvod-f .glavna',{opacity:0,scale:1.06,duration:2.2,ease:E});
   gsap.utils.toArray('.an-up').filter(e=>!e.closest('.uvod')).forEach(el=>gsap.from(el,{y:40,opacity:0,duration:1.4,ease:E,scrollTrigger:{trigger:el,start:'top 92%'}}));
   gsap.utils.toArray('.an-clip').forEach(el=>{gsap.from(el,{clipPath:'inset(16% 0 0 0)',duration:1.6,ease:E,scrollTrigger:{trigger:el,start:'top 90%'}});const im=el.querySelector('img');if(im&&!im.classList.contains('par'))gsap.from(im,{scale:1.22,duration:2,ease:E,scrollTrigger:{trigger:el,start:'top 90%'}})});
   gsap.utils.toArray('img.par').forEach(im=>gsap.fromTo(im,{yPercent:-8},{yPercent:4,ease:'none',scrollTrigger:{trigger:im.parentElement,start:'top bottom',end:'bottom top',scrub:true}}));
