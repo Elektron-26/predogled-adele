@@ -1,0 +1,23 @@
+name: slike
+on:
+  push:
+    paths: ['slike.txt','.github/workflows/slike.yml']
+permissions:
+  contents: write
+jobs:
+  prenos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p img
+          while read -r ime url; do
+            [ -z "$ime" ] && continue
+            curl -sSfL -A 'Mozilla/5.0' -o "img/$ime" "$url" || echo "NAPAKA $ime"
+          done < slike.txt
+          ls -la img
+          git config user.name 'github-actions'
+          git config user.email 'actions@github.com'
+          git add img
+          git commit -m 'Slike' || echo nic
+          git push
