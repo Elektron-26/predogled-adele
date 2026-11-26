@@ -245,27 +245,91 @@ footer{background:#0C0A08;color:#9C8E7F;padding:90px 0 120px;font-size:14px}
 .uvod .opis{color:#E6DCCF}
 .uvod .nad{color:#E2C29D}
 .uvod-f .glavna img{height:108%!important;object-position:center 45%!important}
-/* manj rjave in zlate: kamen, crnilo, slonovina */
-:root{--sampanjec:#D6CCBE;--bron:#7A6D60}
-.uvod .nad{color:#DCD3C7}
-.gumb{background:var(--slon)}
-.gumb::before{background:#fff}
-.svetla .gumb,.predmeti .gumb{background:var(--noc);color:var(--slon)}
-.svetla .gumb::before,.predmeti .gumb::before{background:#3a312a}
-figure{outline:0!important}
-.meri{background:var(--noc2);border-top:1px solid var(--crta-t);border-bottom:1px solid var(--crta-t)}
-.meri .nad{color:var(--siva-t)}
-.meri .citat{border-left:0;padding-left:0;color:var(--slon);font-size:clamp(24px,2.1vw,30px);max-width:24ch}
-.meri .uvodnik,.obrazec .pod{color:var(--siva-t)}
-.meri-f .q{outline:0}
-.obrazec{background:none;border:0;border-top:1px solid var(--crta-t);padding:clamp(26px,3vw,40px) 0 0}
-.vrsta>.oznaka{color:var(--siva-t);letter-spacing:.16em;font-size:11px}
-.izbire button{color:var(--slon);border-color:rgba(242,235,224,.2);border-radius:2px}
-.izbire button:hover{border-color:rgba(242,235,224,.6)}
-.izbire button[aria-pressed="true"]{color:var(--noc)}
-.odtenki button{color:var(--siva-t)}
-.odtenki button[aria-pressed="true"] i{box-shadow:0 0 0 3px var(--noc2),0 0 0 4px var(--slon)}
-.povzetek small,.odziv small{color:var(--siva-t)}
+/* SVETLA LUKSUZNA PALETA (taste-soft light + OKLCH topli nevtralni toni) */
+:root{
+  --l-ivory:oklch(96% .012 75);--l-paper:oklch(98.4% .007 80);--l-stone:oklch(91.5% .018 72);--l-blush:oklch(93.5% .022 40);
+  --l-ink:oklch(26% .014 55);--l-ink2:oklch(44% .016 60);--l-muted:oklch(60% .02 65);
+  --l-line:oklch(26% .014 55 / .13);--l-line2:oklch(26% .014 55 / .28);
+  --siva-t:var(--l-muted);--crta-t:var(--l-line);--crta-s:var(--l-line);--sampanjec:var(--l-muted);--bron:var(--l-muted);--noc2:var(--l-stone)}
+body{background:var(--l-ivory);color:var(--l-ink);color-scheme:light}
+.nad{color:var(--l-muted)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline-color:var(--l-ink)}
+/* gumbi */
+.gumb{background:var(--l-ink);color:var(--l-paper);border-radius:999px;transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.gumb::before{background:oklch(36% .016 55)}
+.gumb:hover{transform:translateY(-2px)}
+.uvod .gumb,.konec .gumb,header:not(.on) .gumb{background:var(--l-paper);color:var(--l-ink)}
+.uvod .gumb::before,.konec .gumb::before,header:not(.on) .gumb::before{background:#fff}
+/* trak in glava */
+.predogled{background:var(--l-stone);color:var(--l-ink2)}
+.predogled b{color:var(--l-ink)}
+header.on{background:oklch(96% .012 75 / .86);border-bottom:1px solid var(--l-line)}
+header.on .znak,header.on .znak small{color:var(--l-ink)}
+header.on .hd nav a{color:var(--l-ink2)}
+header.on .hd nav a:hover{color:var(--l-ink)}
+header:not(.on) .hd nav a{color:rgba(255,255,255,.82)}
+header:not(.on) .znak small{color:rgba(255,255,255,.8)}
+/* uvod ostane na fotografiji */
+.uvod{color:#FBF8F3}
+.uvod .nad{color:rgba(255,255,255,.8)}
+.uvod-f .glavna::after{background:linear-gradient(180deg,rgba(30,24,20,.42) 0%,rgba(30,24,20,0) 26%,rgba(30,24,20,0) 48%,rgba(30,24,20,.62) 100%),linear-gradient(90deg,rgba(30,24,20,.42) 0%,rgba(30,24,20,0) 62%)!important}
+/* svetle sekcije */
+.svetla,.izjava{background:var(--l-paper);color:var(--l-ink)}
+.svetla .nad,.predmeti .nad{color:var(--l-muted)}
+.kolekciji{background:var(--l-ivory)}
+.kol-glava p,.trak-kol figcaption,.material .uvodnik,.material dd,.pr-glava p,.kos p{color:var(--l-ink2)}
+.trak-kol figcaption b{color:var(--l-ink)}
+.trak-kol .okvir,.mreza figure{background:var(--l-stone)}
+.panel{border-radius:4px}
+.panel::after{background:linear-gradient(0deg,rgba(30,24,20,.66) 0%,rgba(30,24,20,.12) 45%,rgba(30,24,20,0) 70%)}
+.panel .nad{color:rgba(255,255,255,.8)}
+.panel .povezava{color:#fff}
+.predmeti{background:var(--l-stone);color:var(--l-ink)}
+.kos .okvir{background:var(--l-ivory)}
+.kos.konec p{color:var(--l-ink)}
+.kos.konec .povezava{color:var(--l-ink)}
+.pr-napredek i{background:var(--l-ink)}
+/* po meri: rahlo rozast pesek, kot njihovi rozi kosi */
+.meri{background:var(--l-blush);color:var(--l-ink);border:0}
+.meri .nad{color:var(--l-muted)}
+.meri .citat{border-left:0;padding-left:0;color:var(--l-ink);font-size:clamp(24px,2.1vw,30px);max-width:24ch}
+.meri .uvodnik,.obrazec .pod{color:var(--l-ink2)}
+.meri-f figure{border-radius:4px}
+.meri-f .q{outline:0;box-shadow:0 30px 60px -30px oklch(30% .03 40 / .35)}
+.obrazec{background:var(--l-paper);border:1px solid var(--l-line);border-radius:6px;padding:clamp(26px,3.4vw,52px);box-shadow:0 40px 80px -50px oklch(30% .03 40 / .3)}
+.vrsta{border-bottom-color:var(--l-line)}
+.vrsta>.oznaka{color:var(--l-muted);letter-spacing:.16em;font-size:11px}
+.izbire button{color:var(--l-ink);border-color:var(--l-line2);border-radius:999px;padding:7px 18px 8px}
+.izbire button:hover{border-color:var(--l-ink)}
+.izbire button[aria-pressed="true"]{background:var(--l-ink);color:var(--l-paper);border-color:var(--l-ink)}
+.odtenki button{color:var(--l-ink2)}
+.odtenki button[aria-pressed="true"]{color:var(--l-ink)}
+.odtenki i{border-color:var(--l-line2)}
+.odtenki button[aria-pressed="true"] i{box-shadow:0 0 0 3px var(--l-paper),0 0 0 4px var(--l-ink)}
+.vrsta input,.vrsta textarea,.povzetek{color:var(--l-ink)}
+.vrsta input::placeholder,.vrsta textarea::placeholder{color:var(--l-muted)}
+.povzetek small,.odziv small{color:var(--l-muted)}
+/* material, galerija */
+.material dl div{border-top-color:var(--l-line)}
+.mat-f{border-radius:4px}
+.galerija{background:var(--l-ivory)}
+.mreza figure{border-radius:3px}
+.gal-glava .povezava{color:var(--l-ink)!important}
+/* zakljucek na fotografiji, nogavica svetla */
+.konec{color:#FBF8F3}
+.konec::after{background:rgba(30,24,20,.38)}
+.konec .nad{color:rgba(255,255,255,.8)}
+.konec p{color:rgba(255,255,255,.9)}
+footer{background:var(--l-stone);color:var(--l-ink2)}
+footer .znak,footer .znak small{color:var(--l-ink)}
+.ft strong{color:var(--l-muted)}
+.ft a:hover{color:var(--l-ink)}
+/* povecava fotografij */
+.lb{background:oklch(96% .012 75 / .97)}
+.lb button{color:var(--l-ink)}
+.lb button:hover{color:var(--l-muted)}
+.lb p{color:var(--l-ink2)}
+.mob .gumb{box-shadow:0 18px 40px -16px oklch(26% .014 55 / .5)}
 </style>
 </head>
 <body>
@@ -488,10 +552,10 @@ $('izbPred').addEventListener('click',e=>{const b=e.target.closest('button');if(
 $('izbKol').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;kol=b.dataset.v;$('izbKol').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));if(kol==='Pure Form'&&bar.size>1){const p=[...bar][0];bar.forEach(v=>nastavi($('izbBar'),v,false));bar.clear();bar.add(p);nastavi($('izbBar'),p,true)}povz()});
 $('izbBar').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const v=b.dataset.v;if(bar.has(v))bar.delete(v);else{if(kol==='Pure Form'){bar.forEach(x=>nastavi($('izbBar'),x,false));bar.clear()}bar.add(v)}b.setAttribute('aria-pressed',bar.has(v));povz()});
 function povz(){const p=$('povzetek');
-  if(!pred.size){p.innerHTML='<span style="color:rgba(233,218,203,.5)">Izberi predmete, kolekcijo in odtenke.</span>';return}
+  if(!pred.size){p.innerHTML='<span style="color:#9a8e82">Izberi predmete, kolekcijo in odtenke.</span>';return}
   const s=[...pred];let t=s.length>1?s.slice(0,-1).join(', ')+' in '+s.at(-1):s[0];t=t.charAt(0).toUpperCase()+t.slice(1);
   let h=t+', <em>'+kol+'</em>'+(bar.size?', '+[...bar].join(' in '):'')+'.';
-  h+=pred.size>=3?'<small>Pri treh ali več predmetih obračunamo popust.</small>':'<small style="color:#B3A595">Še '+(3-pred.size)+(3-pred.size===1?' predmet':' predmeta')+' do popusta.</small>';
+  h+=pred.size>=3?'<small>Pri treh ali več predmetih obračunamo popust.</small>':'<small style="color:#9a8e82">Še '+(3-pred.size)+(3-pred.size===1?' predmet':' predmeta')+' do popusta.</small>';
   p.innerHTML=h}
 $('obrazec').addEventListener('submit',e=>{e.preventDefault();const k=$('kontakt').value.trim(),o=$('odziv');
   if(!pred.size){o.innerHTML='Izberi vsaj en predmet.';o.classList.add('on');return}
