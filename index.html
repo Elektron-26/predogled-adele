@@ -245,6 +245,27 @@ footer{background:#0C0A08;color:#9C8E7F;padding:90px 0 120px;font-size:14px}
 .uvod .opis{color:#E6DCCF}
 .uvod .nad{color:#E2C29D}
 .uvod-f .glavna img{height:108%!important;object-position:center 45%!important}
+/* manj rjave in zlate: kamen, crnilo, slonovina */
+:root{--sampanjec:#D6CCBE;--bron:#7A6D60}
+.uvod .nad{color:#DCD3C7}
+.gumb{background:var(--slon)}
+.gumb::before{background:#fff}
+.svetla .gumb,.predmeti .gumb{background:var(--noc);color:var(--slon)}
+.svetla .gumb::before,.predmeti .gumb::before{background:#3a312a}
+figure{outline:0!important}
+.meri{background:var(--noc2);border-top:1px solid var(--crta-t);border-bottom:1px solid var(--crta-t)}
+.meri .nad{color:var(--siva-t)}
+.meri .citat{border-left:0;padding-left:0;color:var(--slon);font-size:clamp(24px,2.1vw,30px);max-width:24ch}
+.meri .uvodnik,.obrazec .pod{color:var(--siva-t)}
+.meri-f .q{outline:0}
+.obrazec{background:none;border:0;border-top:1px solid var(--crta-t);padding:clamp(26px,3vw,40px) 0 0}
+.vrsta>.oznaka{color:var(--siva-t);letter-spacing:.16em;font-size:11px}
+.izbire button{color:var(--slon);border-color:rgba(242,235,224,.2);border-radius:2px}
+.izbire button:hover{border-color:rgba(242,235,224,.6)}
+.izbire button[aria-pressed="true"]{color:var(--noc)}
+.odtenki button{color:var(--siva-t)}
+.odtenki button[aria-pressed="true"] i{box-shadow:0 0 0 3px var(--noc2),0 0 0 4px var(--slon)}
+.povzetek small,.odziv small{color:var(--siva-t)}
 </style>
 </head>
 <body>
@@ -323,7 +344,7 @@ footer{background:#0C0A08;color:#9C8E7F;padding:90px 0 120px;font-size:14px}
 <section class="meri" id="po-meri">
   <div class="w meri-g">
     <div>
-      <div class="nad an-up">Naročila po meri</div>
+      <div class="nad an-up">Za darila in posebne priložnosti</div>
       <h2 class="an-up">Naročilo po meri</h2>
       <p class="citat an-up">»Ti prineseš idejo, mi pa jo z veliko pozornosti oživimo.«</p>
       <p class="uvodnik an-up">Za rojstni dan s temo »zlato-črno« smo naredili cel set v teh dveh barvah. Povej, kaj imaš v mislih, in pošljemo ti predlog s ceno.</p>
@@ -470,7 +491,7 @@ function povz(){const p=$('povzetek');
   if(!pred.size){p.innerHTML='<span style="color:rgba(233,218,203,.5)">Izberi predmete, kolekcijo in odtenke.</span>';return}
   const s=[...pred];let t=s.length>1?s.slice(0,-1).join(', ')+' in '+s.at(-1):s[0];t=t.charAt(0).toUpperCase()+t.slice(1);
   let h=t+', <em>'+kol+'</em>'+(bar.size?', '+[...bar].join(' in '):'')+'.';
-  h+=pred.size>=3?'<small>Pri treh ali več predmetih obračunamo popust.</small>':'<small style="color:#CDB3A1">Še '+(3-pred.size)+(3-pred.size===1?' predmet':' predmeta')+' do popusta.</small>';
+  h+=pred.size>=3?'<small>Pri treh ali več predmetih obračunamo popust.</small>':'<small style="color:#B3A595">Še '+(3-pred.size)+(3-pred.size===1?' predmet':' predmeta')+' do popusta.</small>';
   p.innerHTML=h}
 $('obrazec').addEventListener('submit',e=>{e.preventDefault();const k=$('kontakt').value.trim(),o=$('odziv');
   if(!pred.size){o.innerHTML='Izberi vsaj en predmet.';o.classList.add('on');return}
